@@ -75,7 +75,7 @@ class PetList extends Component {
         },
         {
           id: 8,
-          name: "Fred",
+          name: "Filomena",
           species: "Fish",
           image: fish,
           happiness: 4,
@@ -87,7 +87,7 @@ class PetList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="pet-list">
         {this.state.pets.map(({ name, image, id }) => (
           <Pet key={id} name={name} image={image} />
         ))}
