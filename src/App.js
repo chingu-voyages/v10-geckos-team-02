@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
 
+import PickPet from "./components/PickPet/PickPet";
+
 function App() {
   return (
     <div className="App">
       PokeAPI
-      <button>Pick A Pet</button>
+      <PickPet />
     </div>
   );
 }
