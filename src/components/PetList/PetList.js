@@ -85,11 +85,20 @@ class PetList extends Component {
     };
   }
 
+  handleClick = () => {
+    console.log("Click");
+  };
+
   render() {
     return (
       <div className="pet-list">
         {this.state.pets.map(({ name, image, id }) => (
-          <Pet key={id} name={name} image={image} />
+          <Pet
+            key={id}
+            name={name}
+            image={image}
+            handleClick={this.handleClick}
+          />
         ))}
       </div>
     );
