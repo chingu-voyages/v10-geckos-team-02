@@ -6,12 +6,7 @@ import PetList from "../PetList/PetList";
 class PickPet extends Component {
   constructor() {
     super();
-    this.state = {
-      name: "",
-      species: "Select your pet",
-      happiness: 10,
-      weight: ""
-    };
+    this.state = {};
   }
 
   render() {
