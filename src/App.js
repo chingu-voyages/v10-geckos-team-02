@@ -2,8 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
-import PickPet from "./components/PickPet/PickPet";
-import Play from "./components/Play";
+import PickPet from "./pages/PickPet/PickPet";
+import Care from "./pages/Care/Care";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       PokeAPI
       <Switch>
         <Route path="/" exact component={PickPet} />
-        <Route path="/care" exact component={Play} />
+        <Route path="/care" exact component={Care} />
       </Switch>
     </div>
   );
