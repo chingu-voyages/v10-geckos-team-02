@@ -16,6 +16,7 @@ class PetList extends Component {
   constructor() {
     super();
     this.state = {
+      petChosen: false,
       pets: [
         {
           id: 1,
@@ -86,7 +87,8 @@ class PetList extends Component {
   }
 
   handleClick = () => {
-    console.log("Click");
+    this.setState({ petChosen: true });
+    console.log("Click!");
   };
 
   render() {

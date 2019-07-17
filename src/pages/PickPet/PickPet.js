@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./PickPet.css";
 
-import PetList from "../PetList/PetList";
+import PetList from "../../components/PetList/PetList";
 
 class PickPet extends Component {
   constructor() {
