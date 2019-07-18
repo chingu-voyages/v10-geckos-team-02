@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      petChosen: true,
+      petChosen: false,
       name: "testName",
       species: "Animal",
       id: "",
@@ -19,6 +19,11 @@ class App extends Component {
         "https://i.pinimg.com/originals/28/ac/5a/28ac5a9ebf96eb7606cc8b9ca2c3abef.jpg"
     };
   }
+
+  handleClick = () => {
+    this.setState({ petChosen: true });
+    console.log("Click");
+  };
 
   render() {
     const {
@@ -51,6 +56,7 @@ class App extends Component {
             happiness={happiness}
             weight={weight}
             image={image}
+            handleClick={this.handleClick}
           />
         ) : (
           <Care
