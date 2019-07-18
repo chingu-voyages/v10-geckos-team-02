@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./PetList.css";
 import Pet from "../Pet/Pet";
 
@@ -78,24 +78,13 @@ const petInfo = [
     weight: 1
   }
 ];
-class PetList extends Component {
-  handleClick = () => {
-    console.log("Click!");
-  };
 
-  render() {
-    return (
-      <div className="pet-list">
-        {petInfo.map(({ name, image, id }) => (
-          <Pet
-            key={id}
-            name={name}
-            image={image}
-            handleClick={this.handleClick}
-          />
-        ))}
-      </div>
-    );
-  }
-}
+const PetList = ({ handleClick }) => (
+  <div className="pet-list">
+    {petInfo.map(({ name, image, id }) => (
+      <Pet key={id} name={name} image={image} handleClick={handleClick} />
+    ))}
+  </div>
+);
+
 export default PetList;
