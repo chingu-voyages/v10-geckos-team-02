@@ -15,13 +15,32 @@ class App extends Component {
       id: "",
       happiness: 0,
       weight: 0,
+      credit: 0,
       image:
         "https://i.pinimg.com/originals/28/ac/5a/28ac5a9ebf96eb7606cc8b9ca2c3abef.jpg"
     };
   }
 
-  handleClick = (name, species, image, happiness, weight) => {
-    this.setState({ petChosen: true, name, species, image, happiness, weight });
+  handleClick = (name, species, image, weight) => {
+    this.setState({ petChosen: true, name, species, image, weight });
+  };
+
+  handleFeed = () => {
+    if (this.state.credit < 3) return;
+    this.setState({
+      weight: this.state.weight + 5,
+      credit: this.state.credit - 3,
+      happiness: this.state.happiness + 2
+    });
+  };
+
+  handlePlay = () => {
+    if (this.state.weight < 3) return;
+    this.setState({
+      weight: this.state.weight - 3,
+      credit: this.state.credit + 4,
+      happiness: this.state.happiness + 3
+    });
   };
 
   render() {
@@ -32,7 +51,8 @@ class App extends Component {
       id,
       happiness,
       weight,
-      image
+      image,
+      credit
     } = this.state;
 
     return (
@@ -63,6 +83,9 @@ class App extends Component {
             happiness={happiness}
             weight={weight}
             image={image}
+            credit={credit}
+            onFeed={this.handleFeed}
+            onPlay={this.handlePlay}
           />
         )}
       </div>

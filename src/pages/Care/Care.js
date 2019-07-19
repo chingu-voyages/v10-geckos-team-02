@@ -5,31 +5,8 @@ import Play from "../../components/Play/Play";
 import Feed from "../../components/Feed/Feed";
 
 class Care extends React.Component {
-  state = {
-    credit: 0,
-    happiness: 0
-  };
-
-  playPet = () => {
-    this.setState(prevState => {
-      return {
-        credit: prevState.credit + 2,
-        happiness: prevState.happiness + 4
-      };
-    });
-  };
-
-  feedPet = () => {
-    if (this.state.credit < 3) return;
-    this.setState({
-      credit: this.state.credit - 3,
-      happiness: this.state.happiness + 3
-    });
-  };
-
   render() {
-    const { name, image, species, weight } = this.props;
-    const { credit, happiness } = this.state;
+   const { name, image, species, weight, credit, happiness } = this.props;
     return (
       <div>
         <h1>Care For {name}</h1>
@@ -38,15 +15,15 @@ class Care extends React.Component {
         <Play
           credit={credit}
           happiness={happiness}
-          onPlay={() => this.playPet()}
+          onPlay={() => this.props.onPlay()}
         />
         <Feed
           credit={credit}
           happiness={happiness}
-          onFeed={() => this.feedPet()}
+          onFeed={() => this.props.onFeed()}
         />
         <div>Credit: {credit}</div>
-        <div>Happiness: {happiness < 0 ? 0 : happiness}</div>
+        <div>Happiness: {happiness}</div>
         <div>Weight: {weight}</div>
       </div>
     );
