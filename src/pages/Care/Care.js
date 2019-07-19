@@ -28,7 +28,7 @@ class Care extends React.Component {
   };
 
   render() {
-    const { name, image, species } = this.props;
+    const { name, image, species, weight } = this.props;
     const { credit, happiness } = this.state;
     return (
       <div>
@@ -47,6 +47,7 @@ class Care extends React.Component {
         />
         <div>Credit: {credit}</div>
         <div>Happiness: {happiness < 0 ? 0 : happiness}</div>
+        <div>Weight: {weight}</div>
       </div>
     );
   }
