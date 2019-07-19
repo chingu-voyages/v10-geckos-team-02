@@ -1,9 +1,9 @@
 import React from "react";
 import "./Pet.css";
 
-const Pet = ({ image, name, species, handleClick }) => {
+const Pet = ({ image, name, species, weight, handleClick }) => {
   const handleClickPet = () => {
-    handleClick(name, species, image);
+    handleClick(name, species, image, weight);
   };
 
   return (
