@@ -20,9 +20,8 @@ class App extends Component {
     };
   }
 
-  handleClick = () => {
-    this.setState({ petChosen: true });
-    console.log("Click");
+  handleClick = (name, species, image) => {
+    this.setState({ petChosen: true, name, species, image });
   };
 
   render() {
