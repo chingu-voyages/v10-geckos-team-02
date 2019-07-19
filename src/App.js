@@ -49,7 +49,6 @@ class App extends Component {
         </Switch> */}
         {!petChosen ? (
           <PickPet
-            petChosen={petChosen}
             name={name}
             species={species}
             id={id}
@@ -60,7 +59,6 @@ class App extends Component {
           />
         ) : (
           <Care
-            petChosen={petChosen}
             name={name}
             species={species}
             happiness={happiness}

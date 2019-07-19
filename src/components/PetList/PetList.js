@@ -81,8 +81,16 @@ const petInfo = [
 
 const PetList = ({ handleClick }) => (
   <div className="pet-list">
-    {petInfo.map(({ name, image, id }) => (
-      <Pet key={id} name={name} image={image} handleClick={handleClick} />
+    {petInfo.map(({ name, image, id, species, happiness, weight }) => (
+      <Pet
+        key={id}
+        name={name}
+        image={image}
+        handleClick={handleClick}
+        species={species}
+        happiness={happiness}
+        weight={weight}
+      />
     ))}
   </div>
 );
