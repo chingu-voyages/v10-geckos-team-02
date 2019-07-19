@@ -28,28 +28,25 @@ class Care extends React.Component {
   };
 
   render() {
+    const { name, image, species } = this.props;
+    const { credit, happiness } = this.state;
     return (
       <div>
-        <h1>Care For {this.props.name}</h1>
-        <img src={this.props.image} alt="animal" />
-        <h3>Species: {this.props.species}</h3>
+        <h1>Care For {name}</h1>
+        <img src={image} alt="animal" />
+        <h3>Species: {species}</h3>
         <Play
-          credit={this.state.credit}
-          happiness={this.state.happiness}
+          credit={credit}
+          happiness={happiness}
           onPlay={() => this.playPet()}
         />
         <Feed
-          credit={this.state.credit}
-          happiness={this.state.happiness}
+          credit={credit}
+          happiness={happiness}
           onFeed={() => this.feedPet()}
         />
-        <div>
-          Credit:{" "}
-          {this.state.credit < 0 ? (this.state.credit = 0) : this.state.credit}
-        </div>
-        <div>
-          Happiness: {this.state.happiness < 0 ? 0 : this.state.happiness}
-        </div>
+        <div>Credit: {credit}</div>
+        <div>Happiness: {happiness < 0 ? 0 : happiness}</div>
       </div>
     );
   }
