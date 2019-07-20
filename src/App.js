@@ -12,7 +12,6 @@ class App extends Component {
       petChosen: false,
       name: "testName",
       species: "Animal",
-      id: "",
       happiness: 0,
       weight: 0,
       credit: 0,
@@ -48,7 +47,6 @@ class App extends Component {
       petChosen,
       name,
       species,
-      id,
       happiness,
       weight,
       image,
@@ -70,8 +68,6 @@ class App extends Component {
           <PickPet
             name={name}
             species={species}
-            id={id}
-            happiness={happiness}
             weight={weight}
             image={image}
             handleClick={this.handleClick}

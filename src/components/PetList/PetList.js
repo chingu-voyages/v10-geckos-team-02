@@ -18,31 +18,27 @@ const petInfo = [
     name: "Tina",
     species: "Spider",
     image: spider,
-    happiness: 5,
-    weight: 1
+    weight: 3
   },
   {
     id: 2,
     name: "Drogo",
     species: "Dragon",
     image: dragon,
-    happiness: 3,
-    weight: 10
+    weight: 15
   },
   {
     id: 3,
     name: "Fred",
     species: "Frog",
     image: frog,
-    happiness: 5,
-    weight: 1
+    weight: 5
   },
   {
     id: 4,
     name: "Henry",
     species: "Hippo",
     image: hippo,
-    happiness: 2,
     weight: 10
   },
   {
@@ -50,23 +46,20 @@ const petInfo = [
     name: "Donna",
     species: "Dog",
     image: dog,
-    happiness: 8,
-    weight: 4
+    weight: 6
   },
   {
     id: 6,
     name: "Ben",
     species: "Bird",
     image: bird,
-    happiness: 3,
-    weight: 1
+    weight: 3
   },
   {
     id: 7,
     name: "Clara",
     species: "Cat",
     image: cat,
-    happiness: 5,
     weight: 3
   },
   {
@@ -74,21 +67,19 @@ const petInfo = [
     name: "Filomena",
     species: "Fish",
     image: fish,
-    happiness: 4,
-    weight: 1
+    weight: 3
   }
 ];
 
 const PetList = ({ handleClick }) => (
   <div className="pet-list">
-    {petInfo.map(({ name, image, id, species, happiness, weight }) => (
+    {petInfo.map(({ name, image, id, species, weight }) => (
       <Pet
         key={id}
         name={name}
         image={image}
         handleClick={handleClick}
         species={species}
-        happiness={happiness}
         weight={weight}
       />
     ))}
