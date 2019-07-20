@@ -4,6 +4,7 @@ import "./App.css";
 
 import PickPet from "./pages/PickPet/PickPet";
 import Care from "./pages/Care/Care";
+import Navbar from "./components/Navbar/Navbar";
 
 class App extends Component {
   constructor() {
@@ -55,7 +56,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        PokeAPI
+        <Navbar />
         {/* <Switch>
           <Route
             path="/"
