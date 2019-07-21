@@ -6,9 +6,9 @@ import Feed from "../../components/Feed/Feed";
 
 class Care extends React.Component {
   render() {
-   const { name, image, species, weight, credit, happiness } = this.props;
+    const { name, image, species, weight, credit, happiness } = this.props;
     return (
-      <div>
+      <div className="care-page">
         <h1>Care For {name}</h1>
         <img src={image} alt="animal" />
         <h3>Species: {species}</h3>

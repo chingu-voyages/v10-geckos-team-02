@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #d71e42;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  top: 0;
 }
 
 .container a {
@@ -18,9 +22,9 @@
   width: 75px;
 }
 
-.logo:hover {
+/* .logo:hover {
   cursor: pointer;
-}
+} */
 
 .title {
   font-size: 2em;
