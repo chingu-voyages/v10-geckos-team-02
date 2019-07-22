@@ -37,3 +37,15 @@
 .route-container {
   justify-self: end;
 }
+
+@media only screen and (max-width: 550px) {
+  .no-burger {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .burger {
+    display: none;
+  }
+}
