@@ -22,15 +22,11 @@
   width: 75px;
 }
 
-/* .logo:hover {
-  cursor: pointer;
-} */
-
 .title {
   font-size: 2em;
 }
 
-.routes a {
+.no-burger a {
   padding-right: 30px;
 }
 
