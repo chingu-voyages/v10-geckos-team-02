@@ -12,61 +12,71 @@ import dog from "../../util/images/dog.png";
 import cat from "../../util/images/cat.png";
 import fish from "../../util/images/fish.png";
 
+//Cat icons
+import maki from "../../img/maki.png";
+import mochi from "../../img/mochi.png";
+import nigiri from "../../img/nigiri.png";
+import onigiri from "../../img/onigiri.png";
+import ramen from "../../img/ramen.png";
+import taiyaki from "../../img/taiyaki.png";
+import temaki from "../../img/temaki.png";
+import tempura from "../../img/tempura.png";
+
 const petInfo = [
   {
     id: 1,
-    name: "Tina",
-    species: "Spider",
-    image: spider,
+    name: "Maki clan",
+    species: "Maki",
+    image: maki,
     weight: 3
   },
   {
     id: 2,
-    name: "Drogo",
-    species: "Dragon",
-    image: dragon,
+    name: "Mochi clan",
+    species: "Mochi",
+    image: mochi,
     weight: 15
   },
   {
     id: 3,
-    name: "Fred",
-    species: "Frog",
-    image: frog,
+    name: "Nigiri clan",
+    species: "nigiri",
+    image: nigiri,
     weight: 5
   },
   {
     id: 4,
-    name: "Henry",
-    species: "Hippo",
-    image: hippo,
+    name: "Onigiri clan",
+    species: "Onigiri",
+    image: onigiri,
     weight: 10
   },
   {
     id: 5,
-    name: "Donna",
-    species: "Dog",
-    image: dog,
+    name: "Ramen clan",
+    species: "Ramen",
+    image: ramen,
     weight: 6
   },
   {
     id: 6,
-    name: "Ben",
-    species: "Bird",
-    image: bird,
+    name: "Taiyaki clan",
+    species: "Taiyaki",
+    image: taiyaki,
     weight: 3
   },
   {
     id: 7,
-    name: "Clara",
-    species: "Cat",
-    image: cat,
+    name: "Temaki clan",
+    species: "Temaki",
+    image: temaki,
     weight: 3
   },
   {
     id: 8,
-    name: "Filomena",
-    species: "Fish",
-    image: fish,
+    name: "Tempura clan",
+    species: "Tempura",
+    image: tempura,
     weight: 3
   }
 ];
