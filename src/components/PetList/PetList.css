@@ -11,3 +11,10 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@media (max-width: 550px) {
+  .pet-list {
+    width: 50%;
+    margin-left: 22%;
+  }
+}
