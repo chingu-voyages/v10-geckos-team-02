@@ -1,3 +1,12 @@
 .pet-card:hover {
   cursor: pointer;
+  transform: scale(1.05);
+}
+
+.pet-card {
+  background-color: #c258b4;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
 }

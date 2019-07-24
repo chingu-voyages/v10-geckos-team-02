@@ -1,3 +1,10 @@
 .care-page {
   padding-top: 80px;
 }
+
+.care-title {
+  font-family: "Londrina Shadow", cursive;
+  color: #ac4d9f;
+  font-size: 73px;
+  margin: 20px 0;
+}
