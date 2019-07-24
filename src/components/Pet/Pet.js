@@ -9,7 +9,7 @@ const Pet = ({ image, name, species, weight, handleClick }) => {
   return (
     <div className="pet-card" onClick={handleClickPet}>
       <img src={image} alt="pet" />
-      <h2>{name}</h2>
+      <h2 className="pet-name">{name}</h2>
     </div>
   );
 };

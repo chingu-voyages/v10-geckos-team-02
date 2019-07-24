@@ -3,14 +3,14 @@ import "./PetList.css";
 import Pet from "../Pet/Pet";
 
 // Animal icons
-import spider from "../../util/images/spider.png";
-import dragon from "../../util/images/dragon.png";
-import frog from "../../util/images/frog.png";
-import hippo from "../../util/images/hippo.png";
-import bird from "../../util/images/bird.png";
-import dog from "../../util/images/dog.png";
-import cat from "../../util/images/cat.png";
-import fish from "../../util/images/fish.png";
+// import spider from "../../util/images/spider.png";
+// import dragon from "../../util/images/dragon.png";
+// import frog from "../../util/images/frog.png";
+// import hippo from "../../util/images/hippo.png";
+// import bird from "../../util/images/bird.png";
+// import dog from "../../util/images/dog.png";
+// import cat from "../../util/images/cat.png";
+// import fish from "../../util/images/fish.png";
 
 //Cat icons
 import maki from "../../img/maki.png";
@@ -25,56 +25,56 @@ import tempura from "../../img/tempura.png";
 const petInfo = [
   {
     id: 1,
-    name: "Maki clan",
+    name: "Maki Cat",
     species: "Maki",
     image: maki,
     weight: 3
   },
   {
     id: 2,
-    name: "Mochi clan",
+    name: "Mochi Cat",
     species: "Mochi",
     image: mochi,
     weight: 15
   },
   {
     id: 3,
-    name: "Nigiri clan",
+    name: "Nigiri Cat",
     species: "nigiri",
     image: nigiri,
     weight: 5
   },
   {
     id: 4,
-    name: "Onigiri clan",
+    name: "Onigiri Cat",
     species: "Onigiri",
     image: onigiri,
     weight: 10
   },
   {
     id: 5,
-    name: "Ramen clan",
+    name: "Ramen Cat",
     species: "Ramen",
     image: ramen,
     weight: 6
   },
   {
     id: 6,
-    name: "Taiyaki clan",
+    name: "Taiyaki Cat",
     species: "Taiyaki",
     image: taiyaki,
     weight: 3
   },
   {
     id: 7,
-    name: "Temaki clan",
+    name: "Temaki Cat",
     species: "Temaki",
     image: temaki,
     weight: 3
   },
   {
     id: 8,
-    name: "Tempura clan",
+    name: "Tempura Cat",
     species: "Tempura",
     image: tempura,
     weight: 3
