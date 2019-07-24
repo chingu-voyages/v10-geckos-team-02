@@ -20,7 +20,13 @@ const Navbar = () => {
       <div className="route-container">
         <div className="routes">
           <div className="burger">
-            <Menu width={"100%"} styles={styles} right>
+            <Menu
+              burgerButtonClassName={"burger-button"}
+              crossButtonClassName={"cross-button"}
+              width={"100%"}
+              styles={styles}
+              right
+            >
               <a href="/">Login</a>
               <a href="/">Signup</a>
             </Menu>
