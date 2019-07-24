@@ -9,7 +9,7 @@ class Care extends React.Component {
     const { name, image, species, weight, credit, happiness } = this.props;
     return (
       <div className="care-page">
-        <h1>Care For {name}</h1>
+        <h1 className="care-title">Care For {name}</h1>
         <img src={image} alt="animal" />
         <h3>Species: {species}</h3>
         <Play
