@@ -25,56 +25,56 @@ import tempura from "../../img/tempura.png";
 const petInfo = [
   {
     id: 1,
-    name: "Maki Cat",
+    name: "Maki clan",
     species: "Maki",
     image: maki,
     weight: 3
   },
   {
     id: 2,
-    name: "Mochi Cat",
+    name: "Mochi clan",
     species: "Mochi",
     image: mochi,
     weight: 15
   },
   {
     id: 3,
-    name: "Nigiri Cat",
+    name: "Nigiri clan",
     species: "nigiri",
     image: nigiri,
     weight: 5
   },
   {
     id: 4,
-    name: "Onigiri Cat",
+    name: "Onigiri clan",
     species: "Onigiri",
     image: onigiri,
     weight: 10
   },
   {
     id: 5,
-    name: "Ramen Cat",
+    name: "Ramen clan",
     species: "Ramen",
     image: ramen,
     weight: 6
   },
   {
     id: 6,
-    name: "Taiyaki Cat",
+    name: "Taiyaki clan",
     species: "Taiyaki",
     image: taiyaki,
     weight: 3
   },
   {
     id: 7,
-    name: "Temaki Cat",
+    name: "Temaki clan",
     species: "Temaki",
     image: temaki,
     weight: 3
   },
   {
     id: 8,
-    name: "Tempura Cat",
+    name: "Tempura clan",
     species: "Tempura",
     image: tempura,
     weight: 3
