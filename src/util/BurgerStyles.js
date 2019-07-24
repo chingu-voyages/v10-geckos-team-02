@@ -33,10 +33,9 @@ const styles = {
     padding: "0.8em"
   },
   bmItem: {
-    display: "grid",
     outline: "0",
     fontSize: "35px",
-    paddingTop: "20px"
+    margin: "5% 35%"
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)",
