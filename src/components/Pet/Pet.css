@@ -14,3 +14,7 @@
 .pet-card img {
   max-width: 100%;
 }
+
+.pet-name {
+  color: white;
+}

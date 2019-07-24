@@ -12,7 +12,7 @@ import Typography from "@material-ui/core/Typography";
 
 class Care extends React.Component {
   render() {
-    const { name, image, species, weight, credit, happiness } = this.props;
+    const { name, image, weight, credit, happiness } = this.props;
 
     return (
       <div className="care-page">

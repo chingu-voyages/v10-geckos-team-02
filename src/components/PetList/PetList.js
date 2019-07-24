@@ -3,14 +3,14 @@ import "./PetList.css";
 import Pet from "../Pet/Pet";
 
 // Animal icons
-import spider from "../../util/images/spider.png";
-import dragon from "../../util/images/dragon.png";
-import frog from "../../util/images/frog.png";
-import hippo from "../../util/images/hippo.png";
-import bird from "../../util/images/bird.png";
-import dog from "../../util/images/dog.png";
-import cat from "../../util/images/cat.png";
-import fish from "../../util/images/fish.png";
+// import spider from "../../util/images/spider.png";
+// import dragon from "../../util/images/dragon.png";
+// import frog from "../../util/images/frog.png";
+// import hippo from "../../util/images/hippo.png";
+// import bird from "../../util/images/bird.png";
+// import dog from "../../util/images/dog.png";
+// import cat from "../../util/images/cat.png";
+// import fish from "../../util/images/fish.png";
 
 //Cat icons
 import maki from "../../img/maki.png";
