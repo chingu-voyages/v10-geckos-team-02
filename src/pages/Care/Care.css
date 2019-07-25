@@ -32,24 +32,16 @@
 }
 
 .card__bars {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .card__bar {
-  position: relative;
-  padding: 10px 20px;
-}
-
-.card__icon {
-  top: 0px;
-  left: 0px;
-  color: yellow;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .button--round {
-  position: absolute;
+  /* position: absolute; */
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -67,8 +59,6 @@
   border: 0.25rem solid #f9fad2;
   padding: 5px 40px;
   border-radius: 10px;
-  position: absolute;
+  color: white;
   text-align: right;
-  top: 13px;
-  left: 30px;
 }
