@@ -4,4 +4,6 @@
   min-height: 100vh;
   flex-direction: column;
   background-color: #8d3293;
+  font-weight: bold;
+  font-family: "Cabin", sans-serif;
 }

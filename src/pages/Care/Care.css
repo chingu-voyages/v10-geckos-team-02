@@ -3,8 +3,9 @@
 }
 
 .care-title {
-  font-family: "Londrina Shadow", cursive;
-  color: #ffffff;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  color: #ac4d9f;
   font-size: 73px;
   margin: 20px 0;
 }
@@ -16,7 +17,7 @@
   border-radius: 20px;
   box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
-  margin: 0 auto;
+  margin: 1.5rem auto;
   width: 80%;
 }
 
@@ -31,13 +32,10 @@
   display: flex;
 }
 
-.card__bars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 .card__bar {
+  width: 85px;
+  position: relative;
+  padding: 10px 20px;
 }
 
 .button--round {
@@ -61,4 +59,42 @@
   border-radius: 10px;
   color: white;
   text-align: right;
+  top: 13px;
+  left: 30px;
+  color: white;
+}
+
+.card__bars {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ReactModalPortal {
+  z-index: 9;
+  position: absolute;
+}
+
+.modal {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 85% !important;
+  border-radius: 10px;
+}
+
+.modal__button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.button__exercise {
+  border: 5px solid white !important;
+  border-radius: 10px !important;
+  background-color: #c15c17 !important;
+  padding: 10px 25px !important;
+  color: white !important;
+  font-family: "Nunito Sans", sans-serif !important;
 }

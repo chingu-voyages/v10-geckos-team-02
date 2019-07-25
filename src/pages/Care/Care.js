@@ -1,4 +1,6 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
 import "./Care.css";
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
@@ -9,15 +11,20 @@ import Feed from "../../components/Feed/Feed";
 
 import Game from "../Game/Game";
 
-// import Container from "@material-ui/core/Container";
-// import Card from "@material-ui/core/Card";
-// import CardContent from "@material-ui/core/CardContent";
-// import CardMedia from "@material-ui/core/CardMedia";
-// import Typography from "@material-ui/core/Typography";
-
 class Care extends React.Component {
+  state = {
+    showModal: false
+  };
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  };
   render() {
-    const { name, image, weight, credit, species, happiness } = this.props;
+    const { name, image, weight, credit, happiness, species } = this.props;
 
     return (
       <div className="care-page">
@@ -31,12 +38,14 @@ class Care extends React.Component {
                 </div>
                 <div className="bar">{credit}</div>
               </div>
+
               <div className="card__bar">
                 <div className="button--round">
                   <img src={heart} alt="heart" />
                 </div>
                 <div className="bar">{happiness}</div>
               </div>
+
               <div className="card__bar">
                 <div className="button--round">
                   <img src={scale} alt="scale" />
@@ -58,6 +67,27 @@ class Care extends React.Component {
                 happiness={happiness}
                 onFeed={() => this.props.onFeed()}
               />
+              <div>
+                <button
+                  onClick={this.handleOpenModal}
+                  className="button__exercise"
+                >
+                  Exercise
+                </button>
+                <Modal
+                  isOpen={this.state.showModal}
+                  contentLabel="Minimal Modal Example"
+                  className="modal"
+                >
+                  <button
+                    onClick={this.handleCloseModal}
+                    className="modal__button"
+                  >
+                    &times;
+                  </button>
+                  <Game />
+                </Modal>
+              </div>
             </div>
           </div>
         </div>

@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Modal from "react-modal";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+Modal.setAppElement("#root");
 
 ReactDOM.render(
   <BrowserRouter>
