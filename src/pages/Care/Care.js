@@ -7,9 +7,17 @@ import scale from "../../img/scale.png";
 import Play from "../../components/Play/Play";
 import Feed from "../../components/Feed/Feed";
 
+import Game from "../Game/Game";
+
+import Container from "@material-ui/core/Container";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Typography from "@material-ui/core/Typography";
+
 class Care extends React.Component {
   render() {
-    const { name, image, species, weight, credit, happiness } = this.props;
+    const { name, image, weight, credit, happiness } = this.props;
 
     return (
       <div className="care-page">

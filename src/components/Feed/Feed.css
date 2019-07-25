@@ -1,7 +1,14 @@
 .button {
+<<<<<<< HEAD
   border: 5px solid white !important;
   border-radius: 10px !important;
   background-color: #c15c17 !important;
   padding: 10px 25px !important;
   color: white !important;
+=======
+  border: 5px solid #ab7b79 !important;
+  border-radius: 10% !important;
+  background-color: white !important;
+  padding: 10px 25px !important;
+>>>>>>> 3f741cb464799cb4099f8208e9c7b4eaa1613196
 }
