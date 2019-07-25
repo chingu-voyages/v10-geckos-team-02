@@ -9,18 +9,19 @@ import Feed from "../../components/Feed/Feed";
 
 import Game from "../Game/Game";
 
-import Container from "@material-ui/core/Container";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
+// import Container from "@material-ui/core/Container";
+// import Card from "@material-ui/core/Card";
+// import CardContent from "@material-ui/core/CardContent";
+// import CardMedia from "@material-ui/core/CardMedia";
+// import Typography from "@material-ui/core/Typography";
 
 class Care extends React.Component {
   render() {
-    const { name, image, weight, credit, happiness } = this.props;
+    const { name, image, weight, credit, species, happiness } = this.props;
 
     return (
       <div className="care-page">
+        <h1 className="care-title">Care for {name}</h1>
         <div className="card">
           <div className="card__bg">
             <div className="card__bars">
@@ -43,7 +44,6 @@ class Care extends React.Component {
                 <div className="bar">{weight}</div>
               </div>
             </div>
-            <div className="card__title" />
             <div className="card__img">
               <img src={image} alt={species} />
             </div>
@@ -61,6 +61,7 @@ class Care extends React.Component {
             </div>
           </div>
         </div>
+        <Game />
       </div>
     );
   }

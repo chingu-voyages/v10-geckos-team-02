@@ -4,7 +4,7 @@
 
 .care-title {
   font-family: "Londrina Shadow", cursive;
-  color: #ac4d9f;
+  color: #ffffff;
   font-size: 73px;
   margin: 20px 0;
 }
@@ -29,6 +29,11 @@
 .card__button {
   justify-content: space-evenly;
   display: flex;
+}
+
+.card__bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card__bar {
@@ -66,9 +71,4 @@
   text-align: right;
   top: 13px;
   left: 30px;
-}
-
-.card__bars {
-  display: flex;
-  justify-content: space-around;
 }
