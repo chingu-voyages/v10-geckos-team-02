@@ -72,7 +72,7 @@ class Care extends React.Component {
                   onClick={this.handleOpenModal}
                   className="button__exercise"
                 >
-                  Exercise
+                  EXERCISE
                 </button>
                 <Modal
                   isOpen={this.state.showModal}
@@ -91,7 +91,6 @@ class Care extends React.Component {
             </div>
           </div>
         </div>
-        <Game />
       </div>
     );
   }

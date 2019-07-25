@@ -5,7 +5,7 @@
 .care-title {
   font-family: "Cabin", sans-serif;
   font-weight: bold;
-  color: #ac4d9f;
+  color: white;
   font-size: 73px;
   margin: 20px 0;
 }
@@ -90,6 +90,7 @@
   border-radius: 10px;
   max-height: calc(100vh - 210px);
   overflow-y: auto;
+  outline: none;
 }
 
 .modal__button {
@@ -99,11 +100,21 @@
   font-weight: bold;
 }
 
+.modal__button:hover {
+  cursor: pointer;
+}
+
 .button__exercise {
   border: 5px solid white !important;
   border-radius: 10px !important;
   background-color: #c15c17 !important;
-  padding: 10px 25px !important;
+  padding: 13px 18px !important;
   color: white !important;
   font-family: "Nunito Sans", sans-serif !important;
+  font-size: 15px;
+  outline: none;
+}
+
+.button__exercise:hover {
+  cursor: pointer;
 }
