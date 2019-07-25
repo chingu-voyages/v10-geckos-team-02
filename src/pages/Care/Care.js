@@ -17,30 +17,36 @@ import Typography from "@material-ui/core/Typography";
 
 class Care extends React.Component {
   render() {
-    const { name, image, weight, credit, happiness } = this.props;
+    const { name, image, weight, credit, happiness, species } = this.props;
 
     return (
       <div className="care-page">
         <div className="card">
           <div className="card__bg">
             <div className="card__bars">
-              <div className="card__bar">
-                <div className="button--round">
-                  <img src={coin} alt="coin" />
+              <div>
+                <div className="card__bar">
+                  <div className="button--round">
+                    <img src={coin} alt="coin" />
+                  </div>
+                  <div className="bar">{credit}</div>
                 </div>
-                <div className="bar">{credit}</div>
               </div>
-              <div className="card__bar">
-                <div className="button--round">
-                  <img src={heart} alt="heart" />
+              <div>
+                <div className="card__bar">
+                  <div className="button--round">
+                    <img src={heart} alt="heart" />
+                  </div>
+                  <div className="bar">{happiness}</div>
                 </div>
-                <div className="bar">{happiness}</div>
               </div>
-              <div className="card__bar">
-                <div className="button--round">
-                  <img src={scale} alt="scale" />
+              <div>
+                <div className="card__bar">
+                  <div className="button--round">
+                    <img src={scale} alt="scale" />
+                  </div>
+                  <div className="bar">{weight}</div>
                 </div>
-                <div className="bar">{weight}</div>
               </div>
             </div>
             <div className="card__title" />
