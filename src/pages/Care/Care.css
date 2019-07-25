@@ -10,12 +10,65 @@
 }
 
 .card {
-  background-color: #f47625 !important;
-  border: 10px solid #f9fad2 !important;
-  border-radius: 10% !important;
+  background-color: #f39f56;
+  border: 0.25rem solid #f9fad2;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.card__bg {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fdc16a;
 }
 
 .card__button {
   justify-content: space-evenly;
   display: flex;
+}
+
+.card__bar {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.card__icon {
+  top: 0px;
+  left: 0px;
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.button--round {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #ac4d9f;
+  z-index: 1;
+}
+
+.button--round img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.bar {
+  background-color: brown;
+  border: 0.25rem solid #f9fad2;
+  padding: 5px 40px;
+  border-radius: 10px;
+  position: absolute;
+  text-align: right;
+  top: 13px;
+  left: 30px;
+}
+
+.card__bars {
+  display: flex;
+  justify-content: space-around;
 }
