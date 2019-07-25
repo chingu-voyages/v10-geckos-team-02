@@ -75,3 +75,33 @@
   display: flex;
   justify-content: space-around;
 }
+
+.ReactModalPortal {
+  z-index: 9;
+  position: absolute;
+}
+
+.modal {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 85% !important;
+  border-radius: 10px;
+}
+
+.modal__button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.button__exercise {
+  border: 5px solid white !important;
+  border-radius: 10px !important;
+  background-color: #c15c17 !important;
+  padding: 10px 25px !important;
+  color: white !important;
+  font-family: "Nunito Sans", sans-serif !important;
+}
