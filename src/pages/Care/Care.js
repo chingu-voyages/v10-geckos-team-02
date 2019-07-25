@@ -4,6 +4,8 @@ import "./Care.css";
 import Play from "../../components/Play/Play";
 import Feed from "../../components/Feed/Feed";
 
+import Game from "../Game/Game";
+
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -54,6 +56,7 @@ class Care extends React.Component {
           <div>Happiness: {happiness}</div>
           <div>Weight: {weight}</div>
         </Container>
+        <Game />
       </div>
     );
   }

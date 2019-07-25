@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
       <div className="title-container">
         <a className="title" href="/">
-          PokeAPI
+          NekoFudo
         </a>
       </div>
       <div className="route-container">
