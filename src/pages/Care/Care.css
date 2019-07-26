@@ -28,8 +28,8 @@
 }
 
 .card__button {
-  justify-content: space-evenly;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card__bar {
@@ -73,7 +73,11 @@
 
 .card__bars {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  place-content: space-between space-around;
+  position: relative;
+  left: -17px;
 }
 
 .ReactModalPortal {
