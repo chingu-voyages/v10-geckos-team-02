@@ -1,5 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from "react";
 import Modal from "react-modal";
 import "./Care.css";
 import coin from "../../img/coin.png";
@@ -7,13 +6,14 @@ import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
 
 import Play from "../../components/Play/Play";
-import Feed from "../../components/Feed/Feed";
 
 import Game from "../Game/Game";
+import PetStore from "../PetStore/PetStore";
 
-class Care extends React.Component {
+class Care extends Component {
   state = {
-    showModal: false
+    showModal: false,
+    showStoreModal: false
   };
 
   handleOpenModal = () => {
@@ -23,8 +23,28 @@ class Care extends React.Component {
   handleCloseModal = () => {
     this.setState({ showModal: false });
   };
+
+  handleOpenStoreModal = () => {
+    this.setState({ showStoreModal: true });
+  };
+
+  handleCloseStoreModal = () => {
+    this.setState({ showStoreModal: false });
+  };
+
+  onPetPlay = () => this.props.onPlay();
+  // onPetFeed = () => this.props.onFeed();
+
   render() {
-    const { name, image, weight, credit, happiness, species } = this.props;
+    const {
+      name,
+      image,
+      weight,
+      credit,
+      happiness,
+      species,
+      onFeed
+    } = this.props;
 
     return (
       <div className="care-page">
@@ -60,13 +80,34 @@ class Care extends React.Component {
               <Play
                 credit={credit}
                 happiness={happiness}
-                onPlay={() => this.props.onPlay()}
+                onPlay={this.onPetPlay}
               />
-              <Feed
+              {/* <Feed
                 credit={credit}
                 happiness={happiness}
-                onFeed={() => this.props.onFeed()}
-              />
+                onFeed={this.onPetFeed}
+              /> */}
+              <div>
+                <button
+                  onClick={this.handleOpenStoreModal}
+                  className="button__exercise"
+                >
+                  FEED
+                </button>
+                <Modal
+                  isOpen={this.state.showStoreModal}
+                  contentLabel="Minimal Modal Example"
+                  className="modal"
+                >
+                  <button
+                    onClick={this.handleCloseStoreModal}
+                    className="modal__button"
+                  >
+                    &times;
+                  </button>
+                  <PetStore onFeed={onFeed} />
+                </Modal>
+              </div>
               <div>
                 <button
                   onClick={this.handleOpenModal}

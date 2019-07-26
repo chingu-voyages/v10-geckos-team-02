@@ -1,0 +1,25 @@
+.store-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.store-header > h1 {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 73px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+}
+
+.store-header > p {
+  padding-left: 45px;
+  font-family: "Cabin", sans-serif;
+}
+
+.store-buttons {
+  display: flex;
+  place-content: space-between space-around;
+  position: relative;
+}
