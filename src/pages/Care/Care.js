@@ -73,7 +73,7 @@ class Care extends Component {
                 <div className="bar">{weight}</div>
               </div>
             </div>
-            <div className="card__img">
+            <div className="card-img">
               <img src={image} alt={species} />
             </div>
             <div className="card__button">
@@ -82,11 +82,6 @@ class Care extends Component {
                 happiness={happiness}
                 onPlay={this.onPetPlay}
               />
-              {/* <Feed
-                credit={credit}
-                happiness={happiness}
-                onFeed={this.onPetFeed}
-              /> */}
               <div>
                 <button
                   onClick={this.handleOpenStoreModal}
@@ -105,7 +100,12 @@ class Care extends Component {
                   >
                     &times;
                   </button>
-                  <PetStore onFeed={onFeed} />
+                  <PetStore
+                    onFeed={onFeed}
+                    credit={credit}
+                    happiness={happiness}
+                    weight={weight}
+                  />
                 </Modal>
               </div>
               <div>

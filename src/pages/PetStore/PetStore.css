@@ -18,8 +18,75 @@
   font-family: "Cabin", sans-serif;
 }
 
-.store-buttons {
+.store-card-bars {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: -17px;
+}
+
+.store-card-bar {
+  width: 85px;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.store-button--round {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #ac4d9f;
+  z-index: 1;
+}
+
+.store-button--round img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.store-bar {
+  background-color: brown;
+  border: 0.25rem solid #f9fad2;
+  max-width: 40px;
+  padding: 5px 40px;
+  border-radius: 10px;
+  position: absolute;
+  text-align: right;
+  top: 13px;
+  left: 30px;
+  color: white;
+}
+
+.food-items {
   display: flex;
   place-content: space-between space-around;
   position: relative;
+  padding-top: 50px;
+}
+
+.food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5em;
+}
+
+.ramen,
+.sushi,
+.tempura {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 695px) {
+  .food-item > h3 {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+  .store-header > h1 {
+    font-size: 40px;
+  }
 }
