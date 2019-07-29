@@ -9,20 +9,26 @@ import Play from "../../components/Play/Play";
 
 import Game from "../Game/Game";
 import PetStore from "../PetStore/PetStore";
+import Timer from "../../components/Timer/Timer";
 
 class Care extends Component {
   state = {
-    showModal: false,
-    showStoreModal: false
+    gamePlaying: false,
+    showStoreModal: false,
+    showGameModal: false
   };
 
-  handleOpenModal = () => {
-    this.setState({ showModal: true });
+  handleOpenGameModal = () => {
+    this.setState({ showGameModal: true, gamePlaying: true });
   };
 
-  handleCloseModal = () => {
-    this.setState({ showModal: false });
+  handleCloseGameModal = () => {
+    this.setState({ showGameModal: false, gamePlaying: false });
   };
+
+  // handleGame = () => {
+  //   this.setState({ gamePlaying: false });
+  // };
 
   handleOpenStoreModal = () => {
     this.setState({ showStoreModal: true });
@@ -110,22 +116,26 @@ class Care extends Component {
               </div>
               <div>
                 <button
-                  onClick={this.handleOpenModal}
+                  onClick={this.handleOpenGameModal}
                   className="button__exercise"
                 >
                   EXERCISE
                 </button>
                 <Modal
-                  isOpen={this.state.showModal}
+                  isOpen={this.state.showGameModal}
                   contentLabel="Minimal Modal Example"
                   className="modal"
                 >
                   <button
-                    onClick={this.handleCloseModal}
+                    onClick={this.handleCloseGameModal}
                     className="modal__button"
                   >
                     &times;
                   </button>
+                  <Timer
+                    gamePlaying={this.state.gamePlaying}
+                    handleGame={this.handleGame}
+                  />
                   <Game />
                 </Modal>
               </div>

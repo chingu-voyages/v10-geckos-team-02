@@ -37,7 +37,8 @@ class Game extends Component {
     this.state = {
       cards: this.shuffleArray(images.slice()),
       selected: [],
-      correct: []
+      correct: [],
+      time: 59
     };
   }
 
