@@ -26,9 +26,10 @@ class Care extends Component {
     this.setState({ showGameModal: false, gamePlaying: false });
   };
 
-  // handleGame = () => {
-  //   this.setState({ gamePlaying: false });
-  // };
+  handleGame = () => {
+    console.log("123");
+    this.setState({ gamePlaying: false });
+  };
 
   handleOpenStoreModal = () => {
     this.setState({ showStoreModal: true });

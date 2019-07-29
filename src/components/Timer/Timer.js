@@ -4,7 +4,7 @@ class Timer extends Component {
   state = {
     isStarted: false,
     minutes: "00",
-    secondsRemaining: 14
+    secondsRemaining: 5
   };
 
   tick = () => {
@@ -13,6 +13,10 @@ class Timer extends Component {
     this.setState({
       secondsRemaining: sec - 1
     });
+
+    if (this.state.secondsRemaining === 0) {
+      this.props.handleGame();
+    }
   };
 
   countTimerDown = () => {
