@@ -126,8 +126,14 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 566px) {
+@media only screen and (max-width: 651px) {
   .care-title {
     font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .care-title {
+    font-size: 30px;
   }
 }
