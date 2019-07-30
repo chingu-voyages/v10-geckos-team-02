@@ -14,7 +14,7 @@
 
 @media (max-width: 550px) {
   .pet-list {
-    width: 50%;
-    margin-left: 22%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
