@@ -2,29 +2,30 @@ import React, { Component } from "react";
 
 class Timer extends Component {
   state = {
-    isStarted: false,
     minutes: "00",
-    secondsRemaining: 5
+    secondsRemaining: 30
   };
 
   tick = () => {
     var sec = this.state.secondsRemaining;
-
     this.setState({
       secondsRemaining: sec - 1
     });
 
     if (this.state.secondsRemaining === 0) {
-      this.props.handleGame();
+      this.props.handleGameOver();
     }
   };
 
   countTimerDown = () => {
-    if (this.props.gamePlaying) {
+    if (this.props.isTimeRunning) {
       clearTimeout(timeOut);
       var timeOut = setTimeout(this.tick, 1000);
       if (this.state.secondsRemaining === 0) {
         clearTimeout(timeOut);
+        setTimeout(() => {
+          alert(`Oh no! You lost the game. Let's try again!`);
+        }, 1000);
       }
     }
   };
@@ -34,7 +35,6 @@ class Timer extends Component {
       <div>
         {this.countTimerDown()}
         <div>
-          {this.state.minutes} :{" "}
           {this.state.secondsRemaining >= 10
             ? this.state.secondsRemaining
             : "0" + this.state.secondsRemaining}

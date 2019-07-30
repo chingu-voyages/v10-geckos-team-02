@@ -44,6 +44,14 @@ class App extends Component {
     });
   };
 
+  handleGameStatus = gameCompleted => {
+    if (gameCompleted) {
+      this.setState({
+        credit: this.state.credit + 4
+      });
+    }
+  };
+
   render() {
     const {
       petChosen,
@@ -84,6 +92,7 @@ class App extends Component {
             credit={credit}
             onFeed={this.handleFeed}
             onPlay={this.handlePlay}
+            handleGameStatus={this.handleGameStatus}
           />
         )}
         <Footer />
