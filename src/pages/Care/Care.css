@@ -81,6 +81,7 @@
   place-content: space-between space-around;
   position: relative;
   left: -17px;
+  margin-bottom: 20px;
 }
 
 .ReactModalPortal {

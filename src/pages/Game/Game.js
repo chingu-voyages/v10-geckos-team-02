@@ -37,17 +37,19 @@ class Game extends Component {
     this.state = {
       cards: this.shuffleArray(images.slice()),
       selected: [],
-      correct: [],
-      time: 59
+      correct: []
     };
   }
 
   onRestartClick = () => {
-    this.setState({
-      cards: this.shuffleArray(images.slice()),
-      selected: [],
-      correct: []
-    });
+    this.setState(
+      {
+        cards: this.shuffleArray(images.slice()),
+        selected: [],
+        correct: []
+      },
+      this.props.handleGameStatus(false)
+    );
   };
 
   onCardClick = clickedIndex => {
@@ -68,9 +70,13 @@ class Game extends Component {
             correct: correct.concat([selected[0], clickedIndex]),
             selected: []
           });
-          if (correct.length === 14) {
+          if (correct.length === 0) {
+            this.props.handleGameOver();
+            this.props.handleGameStatus(true);
+
             setTimeout(() => {
               alert(`Congratulations! You won the game. Let's try again!`);
+
               this.onRestartClick();
             }, 1000);
           }
@@ -101,7 +107,7 @@ class Game extends Component {
     const { correct, selected, cards } = this.state;
     return (
       <div className="Game">
-        <Header onRestartClick={this.onRestartClick} />
+        {/* <Header onRestartClick={this.onRestartClick} /> */}
         <Cardstack
           isCorrect={correct}
           isSelected={selected}

@@ -4,6 +4,7 @@ import "./Care.css";
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
+import timer from "../../img/timer.png";
 
 import Play from "../../components/Play/Play";
 
@@ -13,22 +14,26 @@ import Timer from "../../components/Timer/Timer";
 
 class Care extends Component {
   state = {
-    gamePlaying: false,
+    isTimeRunning: false,
+    isGameCompleted: false,
     showStoreModal: false,
     showGameModal: false
   };
 
   handleOpenGameModal = () => {
-    this.setState({ showGameModal: true, gamePlaying: true });
+    this.setState({
+      showGameModal: true,
+      isTimeRunning: true,
+      isGameCompleted: true
+    });
   };
 
   handleCloseGameModal = () => {
-    this.setState({ showGameModal: false, gamePlaying: false });
-  };
-
-  handleGame = () => {
-    console.log("123");
-    this.setState({ gamePlaying: false });
+    this.setState({
+      showGameModal: false,
+      isTimeRunning: false,
+      isGameCompleted: false
+    });
   };
 
   handleOpenStoreModal = () => {
@@ -37,6 +42,10 @@ class Care extends Component {
 
   handleCloseStoreModal = () => {
     this.setState({ showStoreModal: false });
+  };
+
+  handleGameOver = () => {
+    this.setState({ isTimeRunning: false, isGameCompleted: false });
   };
 
   onPetPlay = () => this.props.onPlay();
@@ -133,11 +142,47 @@ class Care extends Component {
                   >
                     &times;
                   </button>
-                  <Timer
-                    gamePlaying={this.state.gamePlaying}
-                    handleGame={this.handleGame}
+
+                  <div className="card__bars">
+                    <div className="card__bar">
+                      <div className="button--round">
+                        <img src={coin} alt="coin" />
+                      </div>
+                      <div className="bar">{credit}</div>
+                    </div>
+
+                    <div className="card__bar">
+                      <div className="button--round">
+                        <img src={heart} alt="heart" />
+                      </div>
+                      <div className="bar">{happiness}</div>
+                    </div>
+
+                    <div className="card__bar">
+                      <div className="button--round">
+                        <img src={scale} alt="scale" />
+                      </div>
+                      <div className="bar">{weight}</div>
+                    </div>
+                    <div className="card__bar">
+                      <div className="button--round">
+                        <img src={timer} alt="timer" />
+                      </div>
+                      <div className="bar">
+                        <Timer
+                          isTimeRunning={this.state.isTimeRunning}
+                          handleGameOver={this.handleGameOver}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <Game
+                    isTimeRunning={this.state.isTimeRunning}
+                    handleGameOver={this.handleGameOver}
+                    handleGameStatus={isCompleted =>
+                      this.props.handleGameStatus(isCompleted)
+                    }
                   />
-                  <Game />
                 </Modal>
               </div>
             </div>
