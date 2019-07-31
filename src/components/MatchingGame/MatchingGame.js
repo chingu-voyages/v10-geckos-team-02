@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import "../../pages/Game/Game.css";
 //Components
 import Cardstack from "../../components/Cardstack/Cardstack";
-import Timer from "../../components/Timer/Timer";
-import Bar from "../../components/Bar/Bar";
 // Images
-import coin from "../../img/coin.png";
-import heart from "../../img/heart.png";
-import scale from "../../img/scale.png";
-import timer from "../../img/timer.png";
 import maki from "../../img/maki.png";
 import mochi from "../../img/mochi.png";
 import nigiri from "../../img/nigiri.png";
