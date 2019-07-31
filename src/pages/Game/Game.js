@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import "./Game.css";
+//Components
 import Cardstack from "../../components/Cardstack/Cardstack";
-import Header from "../../components/Header/Header";
-
+import Timer from "../../components/Timer/Timer";
+import Bar from "../../components/Bar/Bar";
+// Images
+import coin from "../../img/coin.png";
+import heart from "../../img/heart.png";
+import scale from "../../img/scale.png";
+import timer from "../../img/timer.png";
 import maki from "../../img/maki.png";
 import mochi from "../../img/mochi.png";
 import nigiri from "../../img/nigiri.png";
@@ -90,7 +96,6 @@ class Game extends Component {
           }, 1500);
         }
       }
-
       // Otherwise they already have 2 selected and we don't want to do anything
     }
   };
@@ -105,9 +110,33 @@ class Game extends Component {
 
   render() {
     const { correct, selected, cards } = this.state;
+    const {
+      isTimeRunning,
+      handleGameOver,
+      credit,
+      happiness,
+      weight
+    } = this.props;
     return (
-      <div className="Game">
-        {/* <Header onRestartClick={this.onRestartClick} /> */}
+      <div>
+        <div className="game-menu">
+          <h1 className="game-title">Matching Game</h1>
+          <h3>Earn credits by matching all the cards.</h3>
+          <div className="card__bars">
+            <Bar image={coin} metric={credit} />
+            <Bar image={heart} metric={happiness} />
+            <Bar image={scale} metric={weight} />
+            <Bar
+              image={timer}
+              metric={
+                <Timer
+                  isTimeRunning={isTimeRunning}
+                  handleGameOver={handleGameOver}
+                />
+              }
+            />
+          </div>
+        </div>
         <Cardstack
           isCorrect={correct}
           isSelected={selected}

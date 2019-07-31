@@ -32,48 +32,8 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card__bar {
-  width: 85px;
-  position: relative;
-  padding: 10px 20px;
-}
-
-.card__icon {
-  top: 0px;
-  left: 0px;
-  color: yellow;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
 .card-img {
   padding-top: 25px;
-}
-
-.button--round {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: #ac4d9f;
-  z-index: 1;
-}
-
-.button--round img {
-  max-width: 100%;
-  text-align: center;
-}
-
-.bar {
-  background-color: brown;
-  border: 0.25rem solid #f9fad2;
-  max-width: 40px;
-  padding: 5px 40px;
-  border-radius: 10px;
-  position: absolute;
-  text-align: right;
-  top: 13px;
-  left: 30px;
-  color: white;
 }
 
 .card__bars {
@@ -82,34 +42,6 @@
   position: relative;
   left: -17px;
   margin-bottom: 20px;
-}
-
-.ReactModalPortal {
-  z-index: 9;
-  position: absolute;
-}
-
-.modal {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 85% !important;
-  border-radius: 10px;
-  max-height: calc(100vh - 210px);
-  overflow-y: auto;
-  outline: none;
-}
-
-.modal__button {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.modal__button:hover {
-  cursor: pointer;
 }
 
 .button__exercise {

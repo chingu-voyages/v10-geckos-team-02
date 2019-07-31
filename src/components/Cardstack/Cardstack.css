@@ -3,9 +3,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
   background-color: #8d3293;
-  border-radius: 5px;
-  box-shadow: 10px 10px 25px 5px rgba(0, 0, 0, 0.4);
-  padding: 5%;
   margin: 5%;
 }
 
