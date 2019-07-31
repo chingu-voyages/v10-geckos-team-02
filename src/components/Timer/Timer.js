@@ -11,6 +11,7 @@ class Timer extends Component {
     this.setState({
       secondsRemaining: sec - 1
     });
+    console.log("tick");
 
     if (this.state.secondsRemaining === 0) {
       this.props.handleGameOver();

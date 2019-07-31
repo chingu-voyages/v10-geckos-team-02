@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import "./Game.css";
+import "../../pages/Game/Game.css";
 //Components
 import Cardstack from "../../components/Cardstack/Cardstack";
 import Timer from "../../components/Timer/Timer";
 import Bar from "../../components/Bar/Bar";
-import MatchingGame from "../../components/MatchingGame/MatchingGame";
 // Images
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
@@ -38,7 +37,7 @@ const images = [
   tempura
 ];
 
-class Game extends Component {
+class MatchingGame extends Component {
   constructor() {
     super();
     this.state = {
@@ -110,43 +109,19 @@ class Game extends Component {
   };
 
   render() {
-    const {
-      isTimeRunning,
-      credit,
-      happiness,
-      weight,
-      handleGameOver,
-      handleGameStatus
-    } = this.props;
-    console.log("I've been called");
+    const { correct, selected, cards } = this.state;
+
     return (
       <div>
-        <div className="game-menu">
-          <h1 className="game-title">Matching Game</h1>
-          <h3>Earn credits by matching all the cards.</h3>
-          <div className="card__bars">
-            <Bar image={coin} metric={credit} />
-            <Bar image={heart} metric={happiness} />
-            <Bar image={scale} metric={weight} />
-            <Bar
-              image={timer}
-              metric={
-                <Timer
-                  isTimeRunning={isTimeRunning}
-                  handleGameOver={handleGameOver}
-                />
-              }
-            />
-          </div>
-        </div>
-
-        <MatchingGame
-          handleGameOver={handleGameOver}
-          handleGameStatus={handleGameStatus}
+        <Cardstack
+          isCorrect={correct}
+          isSelected={selected}
+          cards={cards}
+          onCardClick={this.onCardClick}
         />
       </div>
     );
   }
 }
 
-export default Game;
+export default MatchingGame;

@@ -37,7 +37,7 @@ class App extends Component {
   };
 
   onExerciseClick = () => {
-    this.setState({ isPlaying: true });
+    this.setState({ isPlaying: true, isTimeRunning: true });
   };
 
   handleFeed = () => {
@@ -81,7 +81,8 @@ class App extends Component {
       weight,
       image,
       credit,
-      isTimeRunning
+      isTimeRunning,
+      isGameCompleted
     } = this.state;
 
     return (
@@ -124,6 +125,8 @@ class App extends Component {
             handleGameOver={this.handleGameOver}
             handleGameStatus={isCompleted => this.handleGameStatus(isCompleted)}
           />
+          // ) : (
+          //   <div>404</div>
         )}
         <Footer />
       </div>
