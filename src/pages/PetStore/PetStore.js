@@ -1,60 +1,43 @@
 import React from "react";
+import "./PetStore.css";
+//Components
 import Feed from "../../components/Feed/Feed";
-
+import Bar from "../../components/Bar/Bar";
+// Images
 import RealRamen from "../../img/RealRamen.jpg";
 import RealSushi from "../../img/RealSushi.jpg";
 import RealTempura from "../../img/RealTempura.jpg";
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
-import "./PetStore.css";
 
 const PetStore = ({ credit, happiness, onFeed, weight }) => {
-  const onPetFeed = () => onFeed();
-
   return (
     <div>
       <div className="store-header">
-        <h1>Pet Store</h1>
-        <p>Use credits to buy some delicious food for your pet.</p>
+        <h1 className="store-title">Pet Store</h1>
+        <h3>Use credits to buy some delicious food for your pet.</h3>
       </div>
       <div className="store-card-bars">
-        <div className="store-card-bar">
-          <div className="store-button--round">
-            <img src={coin} alt="coin" />
-          </div>
-          <div className="store-bar">{credit}</div>
-        </div>
-
-        <div className="store-card-bar">
-          <div className="store-button--round">
-            <img src={heart} alt="heart" />
-          </div>
-          <div className="store-bar">{happiness}</div>
-        </div>
-
-        <div className="store-card-bar">
-          <div className="store-button--round">
-            <img src={scale} alt="scale" />
-          </div>
-          <div className="store-bar">{weight}</div>
-        </div>
+        <Bar image={coin} metric={credit} />
+        <Bar image={heart} metric={happiness} />
+        <Bar image={scale} metric={weight} />
       </div>
       <div className="food-items">
         <div className="food-item">
           <img className="ramen" alt="ramen" src={RealRamen} />
-          <h3>Ramen (3 credits)</h3>
-          <Feed credit={credit} happiness={happiness} onFeed={onPetFeed} />
+          <h2 className="food-item-title">Ramen (3 credits)</h2>
+          <Feed onFeed={onFeed} />
         </div>
         <div className="food-item">
           <img className="sushi" alt="sushi" src={RealSushi} />
-          <h3>Sushi (3 credits)</h3>
-          <Feed credit={credit} happiness={happiness} onFeed={onPetFeed} />
+          <h2 className="food-item-title">Sushi (3 credits)</h2>
+          <Feed onFeed={onFeed} />
         </div>
         <div className="food-item">
           <img className="tempura" alt="tempura" src={RealTempura} />
-          <h3>Tempura (3 credits)</h3>
-          <Feed credit={credit} happiness={happiness} onFeed={onPetFeed} />
+          <h2 className="food-item-title">Tempura (3 credits)</h2>
+          <Feed onFeed={onFeed} />
         </div>
       </div>
     </div>

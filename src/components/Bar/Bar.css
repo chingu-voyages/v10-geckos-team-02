@@ -1,0 +1,31 @@
+.card__bar {
+  width: 85px;
+  position: relative;
+  padding: 10px 20px;
+}
+.button--round {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #ac4d9f;
+  z-index: 1;
+}
+
+.button--round img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.bar {
+  background-color: brown;
+  border: 0.25rem solid #f9fad2;
+  max-width: 40px;
+  padding: 5px 40px;
+  border-radius: 10px;
+  position: absolute;
+  text-align: right;
+  top: 13px;
+  left: 30px;
+  color: white;
+}

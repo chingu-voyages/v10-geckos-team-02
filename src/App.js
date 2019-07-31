@@ -6,12 +6,18 @@ import PickPet from "./pages/PickPet/PickPet";
 import Care from "./pages/Care/Care";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import PetStore from "./pages/PetStore/PetStore";
+import Game from "./pages/Game/Game";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       petChosen: false,
+      isPlaying: false,
+      isEating: false,
+      isTimeRunning: false,
+      isGameCompleted: false,
       name: "testName",
       species: "Animal",
       happiness: 0,
@@ -24,6 +30,14 @@ class App extends Component {
 
   handleClick = (name, species, image, weight) => {
     this.setState({ petChosen: true, name, species, image, weight });
+  };
+
+  onFeedClick = () => {
+    this.setState({ isEating: true });
+  };
+
+  onExerciseClick = () => {
+    this.setState({ isPlaying: true });
   };
 
   handleFeed = () => {
@@ -52,28 +66,27 @@ class App extends Component {
     }
   };
 
+  handleGameOver = () => {
+    this.setState({ isTimeRunning: false, isGameCompleted: false });
+  };
+
   render() {
     const {
       petChosen,
+      isPlaying,
+      isEating,
       name,
       species,
       happiness,
       weight,
       image,
-      credit
+      credit,
+      isTimeRunning
     } = this.state;
 
     return (
       <div className="App">
         <Navbar />
-        {/* <Switch>
-          <Route
-            path="/"
-            exact
-            component={PickPet}
-          />
-          <Route path="/care" exact component={Care} />
-        </Switch> */}
         {!petChosen ? (
           <PickPet
             name={name}
@@ -82,7 +95,7 @@ class App extends Component {
             image={image}
             handleClick={this.handleClick}
           />
-        ) : (
+        ) : !isEating && !isPlaying ? (
           <Care
             name={name}
             species={species}
@@ -90,9 +103,26 @@ class App extends Component {
             weight={weight}
             image={image}
             credit={credit}
-            onFeed={this.handleFeed}
             onPlay={this.handlePlay}
             handleGameStatus={this.handleGameStatus}
+            onFeedClick={this.onFeedClick}
+            onExerciseClick={this.onExerciseClick}
+          />
+        ) : isEating && !isPlaying ? (
+          <PetStore
+            happiness={happiness}
+            weight={weight}
+            credit={credit}
+            onFeed={this.handleFeed}
+          />
+        ) : (
+          <Game
+            happiness={happiness}
+            weight={weight}
+            credit={credit}
+            isTimeRunning={isTimeRunning}
+            handleGameOver={this.handleGameOver}
+            handleGameStatus={isCompleted => this.handleGameStatus(isCompleted)}
           />
         )}
         <Footer />
