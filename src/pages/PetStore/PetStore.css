@@ -34,15 +34,10 @@
   margin: 0 0.5em;
 }
 
-.food-item-title {
-  color: white;
-}
-
 .ramen,
 .sushi,
 .tempura {
   max-width: 100%;
-  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
 }
 

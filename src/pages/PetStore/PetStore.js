@@ -18,26 +18,30 @@ const PetStore = ({ credit, happiness, onFeed, weight }) => {
         <h1 className="store-title">Pet Store</h1>
         <h3>Use credits to buy some delicious food for your pet.</h3>
       </div>
-      <div className="store-card-bars">
-        <Bar image={coin} metric={credit} />
-        <Bar image={heart} metric={happiness} />
-        <Bar image={scale} metric={weight} />
-      </div>
-      <div className="food-items">
-        <div className="food-item">
-          <img className="ramen" alt="ramen" src={RealRamen} />
-          <h2 className="food-item-title">Ramen (3 credits)</h2>
-          <Feed onFeed={onFeed} />
-        </div>
-        <div className="food-item">
-          <img className="sushi" alt="sushi" src={RealSushi} />
-          <h2 className="food-item-title">Sushi (3 credits)</h2>
-          <Feed onFeed={onFeed} />
-        </div>
-        <div className="food-item">
-          <img className="tempura" alt="tempura" src={RealTempura} />
-          <h2 className="food-item-title">Tempura (3 credits)</h2>
-          <Feed onFeed={onFeed} />
+      <div className="card">
+        <div className="card__bg">
+          <div className="store-card-bars">
+            <Bar image={coin} metric={credit} />
+            <Bar image={heart} metric={happiness} />
+            <Bar image={scale} metric={weight} />
+          </div>
+          <div className="food-items">
+            <div className="food-item">
+              <img className="ramen" alt="ramen" src={RealRamen} />
+              <h2 className="food-item-title">Ramen (3 credits)</h2>
+              <Feed onFeed={onFeed} />
+            </div>
+            <div className="food-item">
+              <img className="sushi" alt="sushi" src={RealSushi} />
+              <h2 className="food-item-title">Sushi (3 credits)</h2>
+              <Feed onFeed={onFeed} />
+            </div>
+            <div className="food-item">
+              <img className="tempura" alt="tempura" src={RealTempura} />
+              <h2 className="food-item-title">Tempura (3 credits)</h2>
+              <Feed onFeed={onFeed} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
