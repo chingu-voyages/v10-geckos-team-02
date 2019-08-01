@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import ModalBox from "../ModalBox/ModalBox";
-import { Modal } from "@material-ui/core";
 
 class Timer extends Component {
   state = {
     minutes: "00",
-    secondsRemaining: 59
+    secondsRemaining: 30
   };
 
   tick = () => {
@@ -14,19 +12,21 @@ class Timer extends Component {
       secondsRemaining: sec - 1
     });
     console.log("tick");
+
+    if (this.state.secondsRemaining === 0) {
+      this.props.handleGameOver();
+    }
   };
 
   countTimerDown = () => {
-    console.log("running");
-
     if (this.props.isTimeRunning) {
       clearTimeout(timeOut);
       var timeOut = setTimeout(this.tick, 1000);
       if (this.state.secondsRemaining === 0) {
         clearTimeout(timeOut);
-        this.props.handleModalOpen();
-        this.props.handleGameOver();
-        this.props.handleGameStatus(false);
+        setTimeout(() => {
+          alert(`Oh no! You lost the game. Let's try again!`);
+        }, 1000);
       }
     }
   };

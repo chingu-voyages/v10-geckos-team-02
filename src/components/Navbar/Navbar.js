@@ -6,7 +6,7 @@ import styles from "../../util/BurgerStyles.js";
 
 const Navbar = () => {
   return (
-    <div className="app-container">
+    <div className="container">
       <div className="image-container">
         <a href="/">
           <img className="logo" src={logo} alt="logo" />

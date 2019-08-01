@@ -1,9 +1,8 @@
 .cardstack {
-  padding-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
-  background-color: #fdc16a;
+  background-color: #8d3293;
   margin: 5%;
 }
 
