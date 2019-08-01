@@ -5,8 +5,12 @@ import { Modal } from "@material-ui/core";
 class Timer extends Component {
   state = {
     minutes: "00",
-    secondsRemaining: 59
+    secondsRemaining: 5
   };
+
+  componentWillUnmount() {
+    clearTimeout(this.timeOut);
+  }
 
   tick = () => {
     var sec = this.state.secondsRemaining;
@@ -14,20 +18,26 @@ class Timer extends Component {
       secondsRemaining: sec - 1
     });
     console.log("tick");
+    if (this.state.secondsRemaining === 0) {
+      clearTimeout(this.timeOut);
+      this.props.handleModalOpen();
+      this.props.handleGameOver();
+      this.props.handleGameStatus(false);
+    }
   };
 
   countTimerDown = () => {
     console.log("running");
 
     if (this.props.isTimeRunning) {
-      clearTimeout(timeOut);
-      var timeOut = setTimeout(this.tick, 1000);
-      if (this.state.secondsRemaining === 0) {
-        clearTimeout(timeOut);
-        this.props.handleModalOpen();
-        this.props.handleGameOver();
-        this.props.handleGameStatus(false);
-      }
+      clearTimeout(this.timeOut);
+      this.timeOut = setTimeout(this.tick, 1000);
+      // if (this.state.secondsRemaining === 0) {
+      //   clearTimeout(this.timeOut);
+      //   this.props.handleModalOpen();
+      //   this.props.handleGameOver();
+      //   this.props.handleGameStatus(false);
+      // }
     }
   };
 
