@@ -9,7 +9,7 @@
 .button--round {
   position: absolute;
   max-height: 50px;
-  max-width: 60%;
+  max-width: 40%;
   border-radius: 50%;
   background: #ac4d9f;
   z-index: 1;
@@ -21,7 +21,7 @@
   height: auto;
 }
 
-/* .bar {
+.bar {
   background-color: brown;
   border: 0.25rem solid #f9fad2;
   max-height: 50px;
@@ -33,9 +33,9 @@
   top: 60%;
   left: 30%;
   color: white;
-} */
+}
 
-.bar {
+/* .bar {
   background-color: brown;
   border: 0.25rem solid #f9fad2;
   width: 90px;
@@ -46,4 +46,4 @@
   top: 13px;
   left: 30px;
   color: white;
-}
+} */

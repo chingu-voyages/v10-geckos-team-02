@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Timer extends Component {
   state = {
     minutes: "00",
-    secondsRemaining: 55
+    secondsRemaining: 5
   };
 
   componentWillUnmount() {

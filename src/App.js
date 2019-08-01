@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import PetStore from "./pages/PetStore/PetStore";
 import Game from "./pages/Game/Game";
+import ModalBox from "./components/ModalBox/ModalBox";
 
 class App extends Component {
   constructor() {
@@ -69,15 +70,36 @@ class App extends Component {
   handleGameStatus = gameCompleted => {
     if (gameCompleted) {
       this.setState({
-        credit: this.state.credit + 4
+        credit: this.state.credit + 4,
+        isGameCompleted: true
+      });
+    } else {
+      this.setState({
+        isGameCompleted: false
       });
     }
   };
 
   handleGameOver = () => {
-    this.setState({ isTimeRunning: false, isGameCompleted: false });
+    this.setState({
+      isTimeRunning: false,
+      isPlaying: false
+    });
   };
 
+  handleModalOpen = () => {
+    !this.state.isModalOpen &&
+      this.setState({
+        isModalOpen: true
+      });
+  };
+
+  handleModalClose = () => {
+    this.setState({
+      isModalOpen: false,
+      isGameCompleted: false
+    });
+  };
   render() {
     const {
       petChosen,
@@ -127,18 +149,28 @@ class App extends Component {
             onStoreBackClick={this.onStoreBackClick}
           />
         ) : (
-          <Game
-            happiness={happiness}
-            weight={weight}
-            credit={credit}
-            isTimeRunning={isTimeRunning}
-            handleGameOver={this.handleGameOver}
-            handleGameStatus={isCompleted => this.handleGameStatus(isCompleted)}
-          />
-          // ) : (
-          //   <div>404</div>
+          <div>
+            <Game
+              happiness={happiness}
+              weight={weight}
+              credit={credit}
+              isTimeRunning={isTimeRunning}
+              handleGameOver={this.handleGameOver}
+              handleGameStatus={isCompleted =>
+                this.handleGameStatus(isCompleted)
+              }
+              isGameCompleted={isGameCompleted}
+              handleModalOpen={this.handleModalOpen}
+            />
+          </div>
         )}
         <Footer />
+        {this.state.isModalOpen && (
+          <ModalBox
+            handleModalClose={this.handleModalClose}
+            isGameCompleted={isGameCompleted}
+          />
+        )}
       </div>
     );
   }

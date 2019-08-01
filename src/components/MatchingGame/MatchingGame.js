@@ -73,12 +73,7 @@ class MatchingGame extends Component {
           if (correct.length === 0) {
             this.props.handleGameOver();
             this.props.handleGameStatus(true);
-
-            setTimeout(() => {
-              alert(`Congratulations! You won the game. Let's try again!`);
-
-              this.onRestartClick();
-            }, 1000);
+            this.props.handleModalOpen();
           }
         } else {
           // It's not a match

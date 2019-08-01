@@ -51,7 +51,7 @@ const Care = ({
             </div>
             <div>
               <button onClick={onExerciseClick} className="button__exercise">
-                EXERCISE
+                TRAIN
               </button>
             </div>
           </div>
