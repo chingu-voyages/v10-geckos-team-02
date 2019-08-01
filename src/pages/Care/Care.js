@@ -6,6 +6,7 @@ import Bar from "../../components/Bar/Bar";
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
+import back from "../../img/back.png";
 
 const Care = ({
   name,
@@ -16,7 +17,8 @@ const Care = ({
   species,
   onFeedClick,
   onExerciseClick,
-  onPlay
+  onPlay,
+  onCareBackClick
 }) => {
   return (
     <div className="care-page">
@@ -55,6 +57,7 @@ const Care = ({
           </div>
         </div>
       </div>
+      <img className="back" src={back} alt="back" onClick={onCareBackClick} />
     </div>
   );
 };

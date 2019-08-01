@@ -10,8 +10,9 @@ import RealTempura from "../../img/RealTempura.jpg";
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
+import back from "../../img/back.png";
 
-const PetStore = ({ credit, happiness, onFeed, weight }) => {
+const PetStore = ({ credit, happiness, onFeed, weight, onStoreBackClick }) => {
   return (
     <div>
       <div className="store-header">
@@ -44,6 +45,7 @@ const PetStore = ({ credit, happiness, onFeed, weight }) => {
           </div>
         </div>
       </div>
+      <img className="back" src={back} alt="back" onClick={onStoreBackClick} />
     </div>
   );
 };

@@ -40,6 +40,14 @@ class App extends Component {
     this.setState({ isPlaying: true, isTimeRunning: true });
   };
 
+  onCareBackClick = () => {
+    this.setState({ petChosen: false, happiness: 0, weight: 0, credit: 0 });
+  };
+
+  onStoreBackClick = () => {
+    this.setState({ isEating: false });
+  };
+
   handleFeed = () => {
     if (this.state.credit < 3) return;
     this.setState({
@@ -108,6 +116,7 @@ class App extends Component {
             handleGameStatus={this.handleGameStatus}
             onFeedClick={this.onFeedClick}
             onExerciseClick={this.onExerciseClick}
+            onCareBackClick={this.onCareBackClick}
           />
         ) : isEating && !isPlaying ? (
           <PetStore
@@ -115,6 +124,7 @@ class App extends Component {
             weight={weight}
             credit={credit}
             onFeed={this.handleFeed}
+            onStoreBackClick={this.onStoreBackClick}
           />
         ) : (
           <Game
