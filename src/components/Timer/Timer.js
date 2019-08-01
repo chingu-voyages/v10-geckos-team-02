@@ -5,7 +5,7 @@ import { Modal } from "@material-ui/core";
 class Timer extends Component {
   state = {
     minutes: "00",
-    secondsRemaining: 5
+    secondsRemaining: 55
   };
 
   componentWillUnmount() {
