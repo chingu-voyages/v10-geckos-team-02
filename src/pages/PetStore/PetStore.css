@@ -39,11 +39,15 @@
 .tempura {
   max-width: 100%;
   border-radius: 15px;
+  height: auto;
 }
 
-@media only screen and (max-width: 695px) {
-  .food-item-title {
-    font-size: 12px;
+@media only screen and (max-width: 767px) {
+  .food-items {
+    flex-wrap: wrap;
+  }
+  .food-item {
+    padding-bottom: 20px;
   }
 }
 
