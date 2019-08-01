@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Timer extends Component {
   state = {
     minutes: "00",
-    secondsRemaining: 5
+    secondsRemaining: 30
   };
 
   componentWillUnmount() {
@@ -15,7 +15,6 @@ class Timer extends Component {
     this.setState({
       secondsRemaining: sec - 1
     });
-    console.log("tick");
     if (this.state.secondsRemaining === 0) {
       clearTimeout(this.timeOut);
       this.props.handleModalOpen();
