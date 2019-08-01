@@ -3,8 +3,12 @@ import React, { Component } from "react";
 class Timer extends Component {
   state = {
     minutes: "00",
-    secondsRemaining: 30
+    secondsRemaining: 55
   };
+
+  componentWillUnmount() {
+    clearTimeout(this.timeOut);
+  }
 
   tick = () => {
     var sec = this.state.secondsRemaining;
@@ -12,22 +16,24 @@ class Timer extends Component {
       secondsRemaining: sec - 1
     });
     console.log("tick");
-
     if (this.state.secondsRemaining === 0) {
+      clearTimeout(this.timeOut);
+      this.props.handleModalOpen();
       this.props.handleGameOver();
+      this.props.handleGameStatus(false);
     }
   };
 
   countTimerDown = () => {
     if (this.props.isTimeRunning) {
-      clearTimeout(timeOut);
-      var timeOut = setTimeout(this.tick, 1000);
-      if (this.state.secondsRemaining === 0) {
-        clearTimeout(timeOut);
-        setTimeout(() => {
-          alert(`Oh no! You lost the game. Let's try again!`);
-        }, 1000);
-      }
+      clearTimeout(this.timeOut);
+      this.timeOut = setTimeout(this.tick, 1000);
+      // if (this.state.secondsRemaining === 0) {
+      //   clearTimeout(this.timeOut);
+      //   this.props.handleModalOpen();
+      //   this.props.handleGameOver();
+      //   this.props.handleGameStatus(false);
+      // }
     }
   };
 
