@@ -32,12 +32,6 @@ class Timer extends Component {
     if (this.props.isTimeRunning) {
       clearTimeout(this.timeOut);
       this.timeOut = setTimeout(this.tick, 1000);
-      // if (this.state.secondsRemaining === 0) {
-      //   clearTimeout(this.timeOut);
-      //   this.props.handleModalOpen();
-      //   this.props.handleGameOver();
-      //   this.props.handleGameStatus(false);
-      // }
     }
   };
 
