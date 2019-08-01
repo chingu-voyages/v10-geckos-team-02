@@ -1,7 +1,6 @@
 import React from "react";
 import "./Care.css";
 // Components
-import Play from "../../components/Play/Play";
 import Bar from "../../components/Bar/Bar";
 // Images
 import coin from "../../img/coin.png";
@@ -33,7 +32,16 @@ const Care = ({
             <img src={image} alt={species} />
           </div>
           <div className="card__button">
-            <Play credit={credit} happiness={happiness} onPlay={onPlay} />
+            <div>
+              <button
+                className="button__exercise"
+                credit={credit}
+                happiness={happiness}
+                onClick={onPlay}
+              >
+                PLAY
+              </button>
+            </div>
             <div>
               <button onClick={onFeedClick} className="button__exercise">
                 FEED

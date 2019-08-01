@@ -3,6 +3,7 @@ import "../../pages/Game/Game.css";
 //Components
 import Cardstack from "../../components/Cardstack/Cardstack";
 import ModalBox from "../../components/ModalBox/ModalBox";
+
 // Images
 import maki from "../../img/maki.png";
 import mochi from "../../img/mochi.png";
