@@ -20,8 +20,8 @@
 .bar {
   background-color: brown;
   border: 0.25rem solid #f9fad2;
-  max-width: 40px;
-  padding: 5px 40px;
+  width: 90px;
+  padding: 5px 15px;
   border-radius: 10px;
   position: absolute;
   text-align: right;
