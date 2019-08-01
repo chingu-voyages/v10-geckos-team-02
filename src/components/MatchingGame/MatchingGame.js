@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "../../pages/Game/Game.css";
 //Components
 import Cardstack from "../../components/Cardstack/Cardstack";
-import ModalBox from "../../components/ModalBox/ModalBox";
-
 // Images
 import maki from "../../img/maki.png";
 import mochi from "../../img/mochi.png";
@@ -13,7 +11,6 @@ import ramen from "../../img/ramen.png";
 import taiyaki from "../../img/taiyaki.png";
 import temaki from "../../img/temaki.png";
 import tempura from "../../img/tempura.png";
-import { Modal } from "@material-ui/core";
 
 const images = [
   maki,
@@ -76,7 +73,12 @@ class MatchingGame extends Component {
           if (correct.length === 0) {
             this.props.handleGameOver();
             this.props.handleGameStatus(true);
-            this.props.handleModalOpen();
+
+            setTimeout(() => {
+              alert(`Congratulations! You won the game. Let's try again!`);
+
+              this.onRestartClick();
+            }, 1000);
           }
         } else {
           // It's not a match

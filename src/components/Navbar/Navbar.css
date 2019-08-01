@@ -1,4 +1,4 @@
-.app-container {
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #d71e42;
@@ -9,7 +9,7 @@
   top: 0;
 }
 
-.app-container a {
+.container a {
   text-decoration: none;
   color: #fff;
 }
