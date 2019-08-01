@@ -62,7 +62,8 @@
   outline: none;
 }
 
-.button__exercise:hover {
+.button__exercise:hover,
+.back {
   cursor: pointer;
 }
 
