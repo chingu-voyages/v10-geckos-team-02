@@ -36,6 +36,11 @@
   padding-top: 25px;
 }
 
+.card-img > img {
+  max-width: 100%;
+  height: auto;
+}
+
 .card__bars {
   display: flex;
   place-content: space-between space-around;
@@ -45,11 +50,13 @@
 }
 
 .button__exercise {
-  border: 5px solid white !important;
-  border-radius: 10px !important;
-  background-color: #c15c17 !important;
-  padding: 13px 18px !important;
-  color: white !important;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: #c15c17;
+  padding: 13px 18px;
+
+  height: auto;
+  color: white;
   font-family: "Nunito Sans", sans-serif !important;
   font-size: 15px;
   outline: none;

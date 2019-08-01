@@ -2,11 +2,14 @@
   width: 85px;
   position: relative;
   padding: 10px 20px;
+  max-width: 100%;
+  height: auto;
 }
+
 .button--round {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  max-height: 50px;
+  max-width: 40%;
   border-radius: 50%;
   background: #ac4d9f;
   z-index: 1;
@@ -15,17 +18,19 @@
 .button--round img {
   max-width: 100%;
   text-align: center;
+  height: auto;
 }
 
 .bar {
   background-color: brown;
   border: 0.25rem solid #f9fad2;
-  width: 90px;
-  padding: 5px 15px;
+  max-height: 50px;
+  max-width: 40%;
+  padding: 5% 40%;
   border-radius: 10px;
   position: absolute;
   text-align: right;
-  top: 13px;
-  left: 30px;
+  top: 60%;
+  left: 30%;
   color: white;
 }
