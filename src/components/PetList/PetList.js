@@ -35,7 +35,7 @@ const petInfo = [
     name: "Mochi Cat",
     species: "Mochi",
     image: mochi,
-    weight: 15
+    weight: 2
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const petInfo = [
     name: "Onigiri Cat",
     species: "Onigiri",
     image: onigiri,
-    weight: 10
+    weight: 3
   },
   {
     id: 5,
