@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cardstack.css";
+// Components
 import GameCard from "../GameCard/GameCard";
 
 const Cardstack = ({ isCorrect, isSelected, cards, onCardClick }) => {

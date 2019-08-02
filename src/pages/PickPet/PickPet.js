@@ -1,6 +1,6 @@
 import React from "react";
 import "./PickPet.css";
-
+// Components
 import PetList from "../../components/PetList/PetList";
 
 const PickPet = ({ handleClick }) => {

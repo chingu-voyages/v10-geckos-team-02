@@ -16,7 +16,6 @@ const ModalBox = ({ handleModalClose, isGameCompleted }) => {
           ) : (
             <div className="text-center">Time out! Good luck next time!</div>
           )}
-
           <button
             className="btn text-white btn--purple"
             onClick={handleModalClose}
