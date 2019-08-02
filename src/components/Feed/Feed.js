@@ -6,7 +6,7 @@ const Feed = ({ onFeed }) => {
   return (
     <div>
       <Button color="primary" onClick={onFeed} className="button">
-        Feed
+        PURCHASE
       </Button>
     </div>
   );

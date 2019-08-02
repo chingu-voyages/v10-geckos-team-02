@@ -4,9 +4,9 @@ import "./PetStore.css";
 import Feed from "../../components/Feed/Feed";
 import Bar from "../../components/Bar/Bar";
 // Images
-import RealRamen from "../../img/RealRamen.jpg";
-import RealSushi from "../../img/RealSushi.jpg";
-import RealTempura from "../../img/RealTempura.jpg";
+import canned_food from "../../img/canned_food.png";
+import wool_ball from "../../img/wool_ball.png";
+import green_tea from "../../img/green_tea.png";
 import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
@@ -28,18 +28,18 @@ const PetStore = ({ credit, happiness, onFeed, weight, onStoreBackClick }) => {
           </div>
           <div className="food-items">
             <div className="food-item">
-              <img className="ramen" alt="ramen" src={RealRamen} />
-              <h2 className="food-item-title">Ramen (3 credits)</h2>
+              <img className="ramen" alt="ramen" src={wool_ball} />
+              <h2 className="food-item-title">Wool ball(3 credits)</h2>
               <Feed onFeed={onFeed} />
             </div>
             <div className="food-item">
-              <img className="sushi" alt="sushi" src={RealSushi} />
-              <h2 className="food-item-title">Sushi (3 credits)</h2>
+              <img className="sushi" alt="sushi" src={canned_food} />
+              <h2 className="food-item-title">Canned food (3 credits)</h2>
               <Feed onFeed={onFeed} />
             </div>
             <div className="food-item">
-              <img className="tempura" alt="tempura" src={RealTempura} />
-              <h2 className="food-item-title">Tempura (3 credits)</h2>
+              <img className="tempura" alt="tempura" src={green_tea} />
+              <h2 className="food-item-title">Green tea (3 credits)</h2>
               <Feed onFeed={onFeed} />
             </div>
           </div>

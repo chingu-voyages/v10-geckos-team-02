@@ -71,12 +71,19 @@ class App extends Component {
     if (gameCompleted) {
       this.setState({
         credit: this.state.credit + 4,
+        happiness: this.state.happiness + 1,
         isGameCompleted: true
       });
     } else {
       this.setState({
         isGameCompleted: false
       });
+
+      if (this.state.happiness >= 1) {
+        this.setState({
+          happiness: this.state.happiness - 1
+        });
+      }
     }
   };
 
