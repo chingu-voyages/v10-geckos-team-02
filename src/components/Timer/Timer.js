@@ -21,7 +21,6 @@ class Timer extends Component {
       secondsRemaining: sec,
       time: this.secondsToTime(sec)
     });
-
     if (this.state.secondsRemaining === 0) {
       clearTimeout(this.timeOut);
 

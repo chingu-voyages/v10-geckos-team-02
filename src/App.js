@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-// import { Switch, Route } from "react-router-dom";
 import "./App.css";
-
-import PickPet from "./pages/PickPet/PickPet";
-import Care from "./pages/Care/Care";
+// Components
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import ModalBox from "./components/ModalBox/ModalBox";
+// Pages
 import PetStore from "./pages/PetStore/PetStore";
 import Game from "./pages/Game/Game";
-import ModalBox from "./components/ModalBox/ModalBox";
+import PickPet from "./pages/PickPet/PickPet";
+import Care from "./pages/Care/Care";
 
 class App extends Component {
   constructor() {
@@ -47,6 +47,10 @@ class App extends Component {
 
   onStoreBackClick = () => {
     this.setState({ isEating: false });
+  };
+
+  onGameBackClick = () => {
+    this.setState({ isPlaying: false });
   };
 
   handleFeed = () => {
@@ -107,6 +111,7 @@ class App extends Component {
       isGameCompleted: false
     });
   };
+
   render() {
     const {
       petChosen,
@@ -168,6 +173,7 @@ class App extends Component {
               }
               isGameCompleted={isGameCompleted}
               handleModalOpen={this.handleModalOpen}
+              onGameBackClick={this.onGameBackClick}
             />
           </div>
         )}

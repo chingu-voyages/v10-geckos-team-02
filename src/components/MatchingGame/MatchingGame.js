@@ -70,7 +70,7 @@ class MatchingGame extends Component {
             correct: correct.concat([selected[0], clickedIndex]),
             selected: []
           });
-          if (correct.length === 0) {
+          if (correct.length === 14) {
             this.props.handleGameOver();
             this.props.handleGameStatus(true);
             this.props.handleModalOpen();
