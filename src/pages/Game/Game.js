@@ -9,6 +9,7 @@ import coin from "../../img/coin.png";
 import heart from "../../img/heart.png";
 import scale from "../../img/scale.png";
 import timer from "../../img/timer.png";
+import back from "../../img/back.png";
 
 const Game = ({
   isTimeRunning,
@@ -17,7 +18,8 @@ const Game = ({
   weight,
   handleGameOver,
   handleGameStatus,
-  handleModalOpen
+  handleModalOpen,
+  onGameBackClick
 }) => {
   return (
     <div>
@@ -42,7 +44,6 @@ const Game = ({
                 }
               />
             </div>
-
             <MatchingGame
               handleGameOver={handleGameOver}
               handleGameStatus={handleGameStatus}
@@ -50,6 +51,7 @@ const Game = ({
             />
           </div>
         </div>
+        <img className="back" src={back} alt="back" onClick={onGameBackClick} />
       </div>
     </div>
   );
