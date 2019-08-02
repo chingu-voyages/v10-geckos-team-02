@@ -8,7 +8,7 @@ const ModalBox = ({ handleModalClose, isGameCompleted }) => {
       <div id="modal" tabIndex="-1" role="dialog" aria-hidden="true">
         <div className="modal-content">
           <span className="close">
-            <button btn--purple onClick={handleModalClose}>
+            <button className="btn--purple" onClick={handleModalClose}>
               &times;
             </button>
           </span>

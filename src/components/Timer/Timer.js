@@ -2,26 +2,43 @@ import React, { Component } from "react";
 
 class Timer extends Component {
   state = {
-    minutes: "00",
-    secondsRemaining: 5
+    time: {},
+    secondsRemaining: 120
   };
+
+  componentDidMount() {
+    let timeLeftVar = this.secondsToTime(this.state.seconds);
+    this.setState({ time: timeLeftVar });
+  }
 
   componentWillUnmount() {
     clearTimeout(this.timeOut);
   }
 
   tick = () => {
-    var sec = this.state.secondsRemaining;
+    var sec = this.state.secondsRemaining - 1;
     this.setState({
-      secondsRemaining: sec - 1
+      secondsRemaining: sec,
+      time: this.secondsToTime(sec)
     });
-    console.log("tick");
+
     if (this.state.secondsRemaining === 0) {
       clearTimeout(this.timeOut);
+
       this.props.handleModalOpen();
       this.props.handleGameOver();
       this.props.handleGameStatus(false);
     }
+  };
+
+  secondsToTime = secs => {
+    let minutes = Math.floor(secs / 60);
+    let seconds = Math.ceil(secs % 60);
+    let obj = {
+      m: minutes,
+      s: seconds
+    };
+    return obj;
   };
 
   countTimerDown = () => {
@@ -31,14 +48,21 @@ class Timer extends Component {
     }
   };
 
+  renderSeconds = () => {
+    if (this.state.time.s) {
+      if (this.state.time.s <= 10) return "0" + this.state.time.s;
+      return this.state.time.s;
+    }
+    return "00";
+  };
+
   render() {
     return (
       <div>
         {this.countTimerDown()}
         <div>
-          {this.state.secondsRemaining >= 10
-            ? this.state.secondsRemaining
-            : "0" + this.state.secondsRemaining}
+          {this.state.time.m ? "0" + this.state.time.m : "02"}:
+          {this.renderSeconds()}
         </div>
       </div>
     );
