@@ -1,0 +1,12 @@
+.creators {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.creators-title {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 73px;
+  margin: 20px 0;
+}
