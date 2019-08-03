@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Body.css";
+// Components
+import ModalBox from "../ModalBox/ModalBox";
 // Pages
 import PetStore from "../../pages/PetStore/PetStore";
 import Game from "../../pages/Game/Game";
@@ -171,6 +173,12 @@ class Body extends Component {
               onGameBackClick={this.onGameBackClick}
             />
           </div>
+        )}
+        {this.state.isModalOpen && (
+          <ModalBox
+            handleModalClose={this.handleModalClose}
+            isGameCompleted={isGameCompleted}
+          />
         )}
       </div>
     );
