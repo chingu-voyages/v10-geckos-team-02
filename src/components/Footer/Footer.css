@@ -6,3 +6,15 @@
   margin: auto;
   padding: 15px 0;
 }
+
+.about-link,
+.faq-link,
+.creators-link {
+  text-decoration: none;
+  color: black;
+}
+
+.faq-link:hover,
+.creators-link:hover {
+  cursor: pointer;
+}

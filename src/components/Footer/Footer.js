@@ -1,19 +1,23 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ onFAQClick, onCreatorsClick }) => {
   return (
     <footer className="footer">
       <a
         href="https://github.com/chingu-voyages/v10-geckos-team-02"
-        className="footer-link"
+        className="about-link"
         target="_blank"
         rel="noopener noreferrer"
       >
         About
       </a>
-      <a href="/faq">FAQ</a>
-      <a href="/creators">Creators</a>
+      <div className="faq-link" onClick={onFAQClick}>
+        FAQ
+      </div>
+      <div className="creators-link" onClick={onCreatorsClick}>
+        Creators
+      </div>
     </footer>
   );
 };
