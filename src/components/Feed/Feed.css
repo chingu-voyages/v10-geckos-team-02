@@ -5,3 +5,9 @@
   padding: 10px 25px !important;
   color: white !important;
 }
+
+.button--disable {
+  border: 5px solid #616161 !important;
+  background-color: transparent !important;
+  color: #616161 !important;
+}

@@ -34,12 +34,17 @@
   margin: 0 0.5em;
 }
 
-.ramen,
-.sushi,
-.tempura {
+.item {
   max-width: 100%;
   border-radius: 15px;
   height: auto;
+}
+
+.isolate {
+  mix-blend-mode: luminosity;
+  isolation: isolate;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 @media only screen and (max-width: 767px) {
