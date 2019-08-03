@@ -29,17 +29,17 @@ const PetStore = ({ credit, happiness, onFeed, weight, onStoreBackClick }) => {
           <div className="food-items">
             <div className={credit >= 3 ? "food-item" : "food-item isolate"}>
               <img className="item" alt="wool-ball" src={wool_ball} />
-              <h2 className="food-item-title">Wool ball(3 credits)</h2>
+              <h2 className="food-item-title">Wool ball</h2>
               <Feed onFeed={onFeed} credit={credit} />
             </div>
             <div className={credit >= 3 ? "food-item" : "food-item isolate"}>
               <img className="item" alt="canned-food" src={canned_food} />
-              <h2 className="food-item-title">Canned food (3 credits)</h2>
+              <h2 className="food-item-title">Canned food</h2>
               <Feed onFeed={onFeed} credit={credit} />
             </div>
             <div className={credit >= 3 ? "food-item" : "food-item isolate"}>
               <img className={"item"} alt="green-tea" src={green_tea} />
-              <h2 className="food-item-title">Green tea (3 credits)</h2>
+              <h2 className="food-item-title">Green tea</h2>
               <Feed onFeed={onFeed} credit={credit} />
             </div>
           </div>
