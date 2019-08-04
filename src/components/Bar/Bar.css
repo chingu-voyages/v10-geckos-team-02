@@ -4,12 +4,13 @@
   padding: 10px 20px;
   max-width: 100%;
   height: auto;
+  left: -17px;
 }
 
 .button--round {
   position: absolute;
   max-height: 50px;
-  max-width: 40%;
+  max-width: 50px;
   border-radius: 50%;
   background: #ac4d9f;
   z-index: 1;
@@ -33,4 +34,54 @@
   top: 60%;
   left: 30%;
   color: white;
+}
+
+@media only screen and (max-width: 535px) {
+  .card__bar {
+    top: -25px;
+    width: 115px;
+  }
+
+  .bar {
+    border-radius: 0;
+    left: 35%;
+  }
+
+  .card__bar:last-child .bar {
+    border-radius: 10px;
+  }
+
+  .card__bar:first-child .bar {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bar {
+    left: 37%;
+  }
+
+  .card__bar:first-child .bar {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .bar {
+    left: 35%;
+    /* padding: 5% 30%; */
+    max-height: 40px;
+  }
+
+  .button--round {
+    max-height: 45px;
+    max-width: 45px;
+  }
+
+  .card__bar:first-child .bar {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }

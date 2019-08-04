@@ -2,6 +2,7 @@ import React from "react";
 import "./ModalBox.css";
 
 const ModalBox = ({ handleModalClose, isGameCompleted }) => {
+  console.log("modall");
   return (
     <div>
       <div id="modal" tabIndex="-1" role="dialog" aria-hidden="true">

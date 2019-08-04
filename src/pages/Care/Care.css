@@ -70,11 +70,35 @@
   .care-title {
     font-size: 60px;
   }
+
+  .card {
+    padding: 10px;
+
+    transition: all 0.2s ease-in-out;
+    margin: 1rem auto;
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 535px) {
   .care-title {
     font-size: 30px;
+  }
+
+  .card__bg {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: transparent;
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+    margin: 1rem auto;
+    width: 90%;
   }
 }
 
@@ -85,5 +109,21 @@
   }
   .button__exercise {
     margin-bottom: 20px;
+  }
+
+  .card__bg {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: transparent;
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+    margin: 1rem auto;
+    width: 90%;
   }
 }

@@ -5,6 +5,7 @@ import PetStore from "../../pages/PetStore/PetStore";
 import Game from "../../pages/Game/Game";
 import PickPet from "../../pages/PickPet/PickPet";
 import Care from "../../pages/Care/Care";
+import ModalBox from "../ModalBox/ModalBox";
 
 class Body extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class Body extends Component {
       petChosen: false,
       isPlaying: false,
       isEating: false,
+      isModalOpen: false,
       isTimeRunning: false,
       isGameCompleted: false,
       name: "testName",
@@ -171,6 +173,12 @@ class Body extends Component {
               onGameBackClick={this.onGameBackClick}
             />
           </div>
+        )}
+        {this.state.isModalOpen && (
+          <ModalBox
+            handleModalClose={this.handleModalClose}
+            isGameCompleted={isGameCompleted}
+          />
         )}
       </div>
     );

@@ -3,7 +3,7 @@ import "./App.css";
 // Components
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import ModalBox from "./components/ModalBox/ModalBox";
+
 import Body from "./components/Body/Body";
 //Pages
 import FAQ from "./pages/FAQ/FAQ";
@@ -73,12 +73,6 @@ class App extends Component {
           onFAQClick={this.onFAQClick}
           onCreatorsClick={this.onCreatorsClick}
         />
-        {this.state.isModalOpen && (
-          <ModalBox
-            handleModalClose={this.handleModalClose}
-            isGameCompleted={isGameCompleted}
-          />
-        )}
       </div>
     );
   }
