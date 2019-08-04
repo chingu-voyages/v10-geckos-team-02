@@ -23,7 +23,6 @@
 
 .card__bg {
   border-radius: 10px;
-  padding: 20px;
   background-color: #fdc16a;
 }
 
@@ -87,7 +86,6 @@
 
   .card__bg {
     border-radius: 10px;
-    padding: 20px;
     background-color: transparent;
   }
 
@@ -113,7 +111,6 @@
 
   .card__bg {
     border-radius: 10px;
-    padding: 20px;
     background-color: transparent;
   }
 

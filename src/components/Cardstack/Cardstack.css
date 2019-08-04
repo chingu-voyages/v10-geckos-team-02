@@ -24,5 +24,6 @@
     padding-top: 25px;
     margin: 1%;
     background-color: transparent;
+    grid-gap: 8px;
   }
 }
