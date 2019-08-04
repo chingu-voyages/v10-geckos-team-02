@@ -44,7 +44,7 @@
   display: flex;
   place-content: space-between space-around;
   position: relative;
-  left: -17px;
+  left: -5px;
   margin-bottom: 20px;
 }
 
@@ -105,6 +105,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .button__exercise {
     margin-bottom: 20px;
   }
@@ -122,5 +123,13 @@
     transition: all 0.2s ease-in-out;
     margin: 1rem auto;
     width: 90%;
+  }
+
+  .card__bars {
+    margin-bottom: 0;
+  }
+
+  .card-img {
+    padding: 0;
   }
 }
