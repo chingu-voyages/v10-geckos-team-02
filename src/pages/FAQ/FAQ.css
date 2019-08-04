@@ -10,3 +10,39 @@
   font-size: 73px;
   margin: 20px 0;
 }
+
+.faq-card {
+  background-color: #f39f56;
+  border: 0.25rem solid #f9fad2;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  margin: 1.5rem auto;
+  width: 80%;
+}
+
+.faq-card-bg {
+  border-radius: 10px;
+  background-color: #fdc16a;
+  padding: 5px 0;
+}
+
+.questions {
+  text-align: left;
+  padding: 0 2em;
+}
+
+.questions > h2 {
+  color: #882a8f;
+}
+
+@media only screen and (max-width: 414px) {
+  .questions {
+    padding: 0 10px;
+  }
+
+  .faq-title {
+    font-size: 40px;
+  }
+}

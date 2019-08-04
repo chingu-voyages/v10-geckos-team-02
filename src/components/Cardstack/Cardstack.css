@@ -18,9 +18,12 @@
   cursor: pointer;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 535px) {
   .cardstack {
     padding: 1%;
+    padding-top: 25px;
     margin: 1%;
+    background-color: transparent;
+    grid-gap: 8px;
   }
 }

@@ -15,6 +15,7 @@ class Body extends Component {
       petChosen: false,
       isPlaying: false,
       isEating: false,
+      isModalOpen: false,
       isTimeRunning: false,
       isGameCompleted: false,
       name: "testName",

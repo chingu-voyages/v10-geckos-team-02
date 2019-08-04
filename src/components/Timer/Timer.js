@@ -2,14 +2,17 @@ import React, { Component } from "react";
 
 class Timer extends Component {
   state = {
-    time: {},
+    time: {
+      m: "2",
+      s: "0"
+    },
     secondsRemaining: 120
   };
 
-  componentDidMount() {
-    let timeLeftVar = this.secondsToTime(this.state.seconds);
-    this.setState({ time: timeLeftVar });
-  }
+  // componentDidMount() {
+  //   let timeLeftVar = this.secondsToTime(this.state.seconds);
+  //   this.setState({ time: timeLeftVar });
+  // }
 
   componentWillUnmount() {
     clearTimeout(this.timeOut);
@@ -21,6 +24,8 @@ class Timer extends Component {
       secondsRemaining: sec,
       time: this.secondsToTime(sec)
     });
+
+    console.log(this.state.time);
     if (this.state.secondsRemaining === 0) {
       clearTimeout(this.timeOut);
 
@@ -49,8 +54,17 @@ class Timer extends Component {
 
   renderSeconds = () => {
     if (this.state.time.s) {
-      if (this.state.time.s <= 10) return "0" + this.state.time.s;
+      if (this.state.time.s <= 9) return "0" + this.state.time.s;
       return this.state.time.s;
+    }
+    return "00";
+  };
+
+  renderMinutes = () => {
+    if (this.state.time.m) {
+      if (this.state.time.m <= 9) {
+        return "0" + this.state.time.m;
+      }
     }
     return "00";
   };
@@ -60,8 +74,9 @@ class Timer extends Component {
       <div>
         {this.countTimerDown()}
         <div>
-          {this.state.time.m ? "0" + this.state.time.m : "02"}:
-          {this.renderSeconds()}
+          {/* {this.state.time.m ? "0" + this.state.time.m : "02"}:
+          {this.state.time.s} */}
+          {this.renderMinutes()}:{this.renderSeconds()}
         </div>
       </div>
     );
