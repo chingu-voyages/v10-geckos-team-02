@@ -3,7 +3,6 @@ import "./App.css";
 // Components
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-
 import Body from "./components/Body/Body";
 //Pages
 import FAQ from "./pages/FAQ/FAQ";
@@ -15,17 +14,9 @@ class App extends Component {
     this.state = {
       isBodyOpen: true,
       faqChosen: false,
-      creatorsChosen: false,
-      isGameCompleted: false
+      creatorsChosen: false
     };
   }
-
-  handleModalClose = () => {
-    this.setState({
-      isModalOpen: false,
-      isGameCompleted: false
-    });
-  };
 
   onFAQClick = () => {
     this.setState({
@@ -52,12 +43,7 @@ class App extends Component {
   };
 
   render() {
-    const {
-      isGameCompleted,
-      isBodyOpen,
-      faqChosen,
-      creatorsChosen
-    } = this.state;
+    const { isBodyOpen, faqChosen, creatorsChosen } = this.state;
 
     return (
       <div className="App">

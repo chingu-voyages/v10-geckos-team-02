@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./Body.css";
+// Components
+import ModalBox from "../ModalBox/ModalBox";
 // Pages
 import PetStore from "../../pages/PetStore/PetStore";
 import Game from "../../pages/Game/Game";
 import PickPet from "../../pages/PickPet/PickPet";
 import Care from "../../pages/Care/Care";
-import ModalBox from "../ModalBox/ModalBox";
 
 class Body extends Component {
   constructor() {
