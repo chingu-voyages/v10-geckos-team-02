@@ -9,11 +9,6 @@ class Timer extends Component {
     secondsRemaining: 120
   };
 
-  // componentDidMount() {
-  //   let timeLeftVar = this.secondsToTime(this.state.seconds);
-  //   this.setState({ time: timeLeftVar });
-  // }
-
   componentWillUnmount() {
     clearTimeout(this.timeOut);
   }
