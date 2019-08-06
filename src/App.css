@@ -7,7 +7,7 @@
   font-weight: bold;
   font-family: "Cabin", sans-serif;
   background: linear-gradient(rgba(140, 50, 145, 0.99), rgba(255, 0, 0, 0.5)),
-    url(./img/bg_1.jpg);
+    url(./util/img/bg_1.jpg);
   background-repeat: repeat;
   background-position: center;
 }

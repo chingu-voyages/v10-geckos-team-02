@@ -32,10 +32,12 @@
   .game-menu {
     max-width: 100%;
   }
+
   .game-title {
     font-size: 30px;
     margin: 10px 0;
   }
+
   .game-description {
     font-size: 15px;
   }
@@ -52,5 +54,11 @@
     transition: all 0.2s ease-in-out;
     margin: 1rem auto;
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .card__bg {
+    padding: 0;
   }
 }

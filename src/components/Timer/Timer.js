@@ -9,11 +9,6 @@ class Timer extends Component {
     secondsRemaining: 120
   };
 
-  // componentDidMount() {
-  //   let timeLeftVar = this.secondsToTime(this.state.seconds);
-  //   this.setState({ time: timeLeftVar });
-  // }
-
   componentWillUnmount() {
     clearTimeout(this.timeOut);
   }
@@ -24,11 +19,8 @@ class Timer extends Component {
       secondsRemaining: sec,
       time: this.secondsToTime(sec)
     });
-
-    console.log(this.state.time);
     if (this.state.secondsRemaining === 0) {
       clearTimeout(this.timeOut);
-
       this.props.handleModalOpen();
       this.props.handleGameOver();
       this.props.handleGameStatus(false);
@@ -74,8 +66,6 @@ class Timer extends Component {
       <div>
         {this.countTimerDown()}
         <div>
-          {/* {this.state.time.m ? "0" + this.state.time.m : "02"}:
-          {this.state.time.s} */}
           {this.renderMinutes()}:{this.renderSeconds()}
         </div>
       </div>

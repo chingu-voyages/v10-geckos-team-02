@@ -4,13 +4,13 @@ import "./PetStore.css";
 import Feed from "../../components/Feed/Feed";
 import Bar from "../../components/Bar/Bar";
 // Images
-import canned_food from "../../img/canned_food.png";
-import wool_ball from "../../img/wool_ball.png";
-import green_tea from "../../img/green_tea.png";
-import coin from "../../img/coin.png";
-import heart from "../../img/heart.png";
-import scale from "../../img/scale.png";
-import back from "../../img/back.png";
+import canned_food from "../../util/img/canned_food.png";
+import wool_ball from "../../util/img/wool_ball.png";
+import green_tea from "../../util/img/green_tea.png";
+import coin from "../../util/img/coin.png";
+import heart from "../../util/img/heart.png";
+import scale from "../../util/img/scale.png";
+import back from "../../util/img/back.png";
 
 const PetStore = ({ credit, happiness, onFeed, weight, onStoreBackClick }) => {
   return (

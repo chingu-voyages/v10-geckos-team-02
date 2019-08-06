@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import styles from "../../util/BurgerStyles.js";
 // Images
-import logo from "../../img/logo.png";
+import logo from "../../util/img/logo.png";
 import Menu from "react-burger-menu/lib/menus/slide";
 
 const Navbar = () => {

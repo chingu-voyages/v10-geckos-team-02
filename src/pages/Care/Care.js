@@ -3,10 +3,10 @@ import "./Care.css";
 // Components
 import Bar from "../../components/Bar/Bar";
 // Images
-import coin from "../../img/coin.png";
-import heart from "../../img/heart.png";
-import scale from "../../img/scale.png";
-import back from "../../img/back.png";
+import coin from "../../util/img/coin.png";
+import heart from "../../util/img/heart.png";
+import scale from "../../util/img/scale.png";
+import back from "../../util/img/back.png";
 
 const Care = ({
   name,
