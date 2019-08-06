@@ -2,14 +2,14 @@ import React from "react";
 import "./PetList.css";
 import Pet from "../Pet/Pet";
 //Images
-import maki from "../../img/maki.png";
-import mochi from "../../img/mochi.png";
-import nigiri from "../../img/nigiri.png";
-import onigiri from "../../img/onigiri.png";
-import ramen from "../../img/ramen.png";
-import taiyaki from "../../img/taiyaki.png";
-import temaki from "../../img/temaki.png";
-import tempura from "../../img/tempura.png";
+import maki from "../../util/img/maki.png";
+import mochi from "../../util/img/mochi.png";
+import nigiri from "../../util/img/nigiri.png";
+import onigiri from "../../util/img/onigiri.png";
+import ramen from "../../util/img/ramen.png";
+import taiyaki from "../../util/img/taiyaki.png";
+import temaki from "../../util/img/temaki.png";
+import tempura from "../../util/img/tempura.png";
 
 const petInfo = [
   {

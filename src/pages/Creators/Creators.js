@@ -1,12 +1,12 @@
 import React from "react";
 import "./Creators.css";
 // Images
-import back from "../../img/back.png";
-import marc from "../../img/Marc.jpeg";
-import tina from "../../img/Tina.jpeg";
-import linkedin from "../../img/linkedin.png";
-import github from "../../img/github.png";
-import chrome from "../../img/chrome.png";
+import back from "../../util/img/back.png";
+import marc from "../../util/img/Marc.jpeg";
+import tina from "../../util/img/Tina.jpeg";
+import linkedin from "../../util/img/linkedin.png";
+import github from "../../util/img/github.png";
+import chrome from "../../util/img/chrome.png";
 
 const Creators = ({ onBackClick }) => {
   return (

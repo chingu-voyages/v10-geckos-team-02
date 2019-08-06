@@ -1,7 +1,7 @@
 import React from "react";
 import "./FAQ.css";
 // Images
-import back from "../../img/back.png";
+import back from "../../util/img/back.png";
 
 const FAQ = ({ onBackClick }) => {
   return (

@@ -5,8 +5,8 @@ import Timer from "../../components/Timer/Timer";
 import Bar from "../../components/Bar/Bar";
 import MatchingGame from "../../components/MatchingGame/MatchingGame";
 // Images
-import timer from "../../img/timer.png";
-import back from "../../img/back.png";
+import timer from "../../util/img/timer.png";
+import back from "../../util/img/back.png";
 
 const Game = ({
   isTimeRunning,
