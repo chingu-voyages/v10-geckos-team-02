@@ -41,17 +41,6 @@ class MatchingGame extends Component {
     };
   }
 
-  onRestartClick = () => {
-    this.setState(
-      {
-        cards: this.shuffleArray(images.slice()),
-        selected: [],
-        correct: []
-      },
-      this.props.handleGameStatus(false)
-    );
-  };
-
   onCardClick = clickedIndex => {
     const { selected, cards, correct } = this.state;
     if (selected.length === 0) {
