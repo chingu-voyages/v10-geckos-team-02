@@ -26,15 +26,40 @@
   border-radius: 10px;
   background-color: #fdc16a;
   padding: 5px 0;
+  display: flex;
 }
 
-.questions {
-  text-align: left;
-  padding: 0 2em;
+.creators-card > p {
+  padding-top: 10px;
 }
 
-.questions > h2 {
-  color: #882a8f;
+.creator-info {
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.creator-photo {
+  width: 80%;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.social-icons {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.social-icons > a {
+  display: block;
+}
+
+.social-icons img {
+  height: 75%;
+  padding: 5px;
 }
 
 @media only screen and (max-width: 414px) {
@@ -44,5 +69,9 @@
 
   .creators-title {
     font-size: 40px;
+  }
+
+  .creators-card-bg {
+    flex-direction: column;
   }
 }
