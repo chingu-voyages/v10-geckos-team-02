@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/v10-geckos-team-02/static/css/main.e1e4b42a.chunk.css",
+    "main.js": "/v10-geckos-team-02/static/js/main.c7c5d7b1.chunk.js",
+    "main.js.map": "/v10-geckos-team-02/static/js/main.c7c5d7b1.chunk.js.map",
+    "runtime~main.js": "/v10-geckos-team-02/static/js/runtime~main.adee1597.js",
+    "runtime~main.js.map": "/v10-geckos-team-02/static/js/runtime~main.adee1597.js.map",
+    "static/js/2.662fafee.chunk.js": "/v10-geckos-team-02/static/js/2.662fafee.chunk.js",
+    "static/js/2.662fafee.chunk.js.map": "/v10-geckos-team-02/static/js/2.662fafee.chunk.js.map",
+    "index.html": "/v10-geckos-team-02/index.html",
+    "precache-manifest.f33b718e3baf95c1e212152f60bcca1f.js": "/v10-geckos-team-02/precache-manifest.f33b718e3baf95c1e212152f60bcca1f.js",
+    "service-worker.js": "/v10-geckos-team-02/service-worker.js",
+    "static/css/main.e1e4b42a.chunk.css.map": "/v10-geckos-team-02/static/css/main.e1e4b42a.chunk.css.map",
+    "static/media/Marc.jpeg": "/v10-geckos-team-02/static/media/Marc.9f397658.jpeg",
+    "static/media/Tina.jpeg": "/v10-geckos-team-02/static/media/Tina.db027657.jpeg",
+    "static/media/App.css": "/v10-geckos-team-02/static/media/bg_1.11c9cced.jpg",
+    "static/media/canned_food.png": "/v10-geckos-team-02/static/media/canned_food.6318655a.png",
+    "static/media/maki.png": "/v10-geckos-team-02/static/media/maki.66d81a52.png",
+    "static/media/ramen.png": "/v10-geckos-team-02/static/media/ramen.83596cd2.png",
+    "static/media/taiyaki.png": "/v10-geckos-team-02/static/media/taiyaki.19bf6dbe.png",
+    "static/media/temaki.png": "/v10-geckos-team-02/static/media/temaki.22b238be.png",
+    "static/media/tempura.png": "/v10-geckos-team-02/static/media/tempura.75800cb3.png",
+    "static/media/timer.png": "/v10-geckos-team-02/static/media/timer.bde7d3b0.png",
+    "static/media/wool_ball.png": "/v10-geckos-team-02/static/media/wool_ball.16e488d5.png"
+  }
+}
