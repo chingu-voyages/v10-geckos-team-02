@@ -37,7 +37,6 @@ const FAQ = ({ onBackClick }) => {
               fun to build. After realizing we both liked cats and Japanese
               food, NekoFudo was born!
             </p>
-<<<<<<< HEAD
             <h2>What’s the biggest mistake you’ve made on a project?</h2>
             <p>
               Probably we did not spend enough time to discuss how the layout
@@ -47,8 +46,6 @@ const FAQ = ({ onBackClick }) => {
               we only learn by making mistakes, and it's good that we are able
               to comfortably communicate with each other about it.
             </p>
-=======
->>>>>>> e1b31c0bdb242f96b8093b2fe8447f89a19eb295
             <h2>What’s the biggest achievement you’ve made on a project?</h2>
             <p>
               Marc: In building a page where a user has to navigate to various
@@ -60,25 +57,16 @@ const FAQ = ({ onBackClick }) => {
               reading articles and Stack Overflow posts!
             </p>
             <p>
-<<<<<<< HEAD
-              <strong />Tina: This is my first time doing pair programming
-              online, so I didn't know what kind of expectations I should have.
-              Fortunately, everything turned out well. The biggest achievement I
-              have done is to understand why I should use one elment rather than
-              the others. In the first phase, Marc and I devided that
-              functionality is our top priority; however, we gradually realize
-              that an user driven application needs to work on the right way.
-              Not only does it help me answer the question what we do but also
-              why we do the way we do.
-=======
-              Cillum pariatur elit fugiat non dolore veniam ut quis sit nostrud.
-              Fugiat duis irure nisi consectetur ea eu est adipisicing. Ullamco
-              est dolor id officia laboris ullamco aliqua labore culpa consequat
-              eiusmod in culpa voluptate. Nulla ex laborum sit est sit ut
-              officia. Voluptate ad commodo cupidatat reprehenderit consectetur
-              cupidatat. Nisi incididunt labore non id adipisicing tempor. Quis
-              in laboris velit et ess
->>>>>>> e1b31c0bdb242f96b8093b2fe8447f89a19eb295
+              <strong />
+              Tina: This is my first time doing pair programming online, so I
+              didn't know what kind of expectations I should have. Fortunately,
+              everything turned out well. The biggest achievement I have done is
+              to understand why I should use one elment rather than the others.
+              In the first phase, Marc and I devided that functionality is our
+              top priority; however, we gradually realize that an user driven
+              application needs to work on the right way. Not only does it help
+              me answer the question what we do but also why we do the way we
+              do.
             </p>
             <h2>How do you divide tasks and keep track of a project?</h2>
             <p>
