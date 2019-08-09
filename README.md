@@ -51,7 +51,8 @@ Understanding of JavaScript, React implementation
 
 ## Deployment
 
-The site is deployed with Git
+The site is deployed with Github Pages:
+https://chingu-voyages.github.io/v10-geckos-team-02/
 
 ## Built With
 
