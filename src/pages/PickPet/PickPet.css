@@ -1,3 +1,24 @@
 .pickpet-menu {
   width: 100%;
+  padding-top: 80px;
+}
+
+.pickpet-title {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 73px;
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 495px) {
+  .pickpet-menu {
+    max-width: 100%;
+  }
+  .pickpet-title {
+    font-size: 50px;
+  }
+  .pickpet-description {
+    font-size: 15px;
+  }
 }

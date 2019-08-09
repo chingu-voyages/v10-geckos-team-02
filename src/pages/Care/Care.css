@@ -1,0 +1,135 @@
+.care-page {
+  padding-top: 80px;
+}
+
+.care-title {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 73px;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: #f39f56;
+  border: 0.25rem solid #f9fad2;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  margin: 1.5rem auto;
+  width: 80%;
+}
+
+.card__bg {
+  border-radius: 10px;
+  background-color: #fdc16a;
+}
+
+.card__button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-img {
+  padding-top: 25px;
+}
+
+.card-img > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card__bars {
+  display: flex;
+  place-content: space-between space-around;
+  position: relative;
+  left: -5px;
+  margin-bottom: 20px;
+}
+
+.button__exercise {
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: #c15c17;
+  padding: 13px 18px;
+  height: auto;
+  color: white;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-size: 15px;
+  outline: none;
+}
+
+.button__exercise:hover,
+.back {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 651px) {
+  .care-title {
+    font-size: 60px;
+  }
+
+  .card {
+    padding: 10px;
+
+    transition: all 0.2s ease-in-out;
+    margin: 1rem auto;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .care-title {
+    font-size: 30px;
+  }
+
+  .card__bg {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+    margin: 1rem auto;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .card__button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button__exercise {
+    margin-bottom: 20px;
+  }
+
+  .card__bg {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .card__bars {
+    margin-bottom: 0;
+  }
+
+  .card-img {
+    padding: 0;
+  }
+}

@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
+  padding: 15px 0 15px 10px;
+}
+
+.about-link,
+.faq-link,
+.creators-link {
+  text-decoration: none;
+  color: black;
+}
+
+.faq-link:hover,
+.creators-link:hover {
+  cursor: pointer;
+}

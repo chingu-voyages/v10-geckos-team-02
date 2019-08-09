@@ -1,0 +1,13 @@
+.game-card > img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.game-card {
+  box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.game-card:hover {
+  cursor: pointer;
+}

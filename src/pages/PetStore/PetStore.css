@@ -1,0 +1,64 @@
+.store-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.store-title {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 73px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.store-card-bars {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: -17px;
+}
+
+.food-items {
+  display: flex;
+  place-content: space-between space-around;
+  position: relative;
+  padding-top: 50px;
+}
+
+.food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5em;
+}
+
+.item {
+  max-width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+
+.isolate {
+  mix-blend-mode: luminosity;
+  isolation: isolate;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+@media only screen and (max-width: 767px) {
+  .food-items {
+    flex-wrap: wrap;
+  }
+  .food-item {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+  .store-title {
+    font-size: 50px;
+    padding-top: 10px;
+  }
+}

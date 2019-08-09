@@ -1,0 +1,8 @@
+.button {
+  border: 5px solid white !important;
+  border-radius: 10px !important;
+  background-color: #c15c17 !important;
+  padding: 10px 25px !important;
+  color: white !important;
+  font-family: "Nunito Sans", sans-serif !important;
+}

@@ -1,0 +1,29 @@
+.cardstack {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  background-color: #fdc16a;
+  margin: 5% 7%;
+}
+
+.game-card:before {
+  content: "";
+  padding-bottom: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.game-card:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-device-width: 535px) {
+  .cardstack {
+    padding: 1%;
+    padding-top: 25px;
+    margin: 1%;
+    background-color: transparent;
+    grid-gap: 8px;
+  }
+}

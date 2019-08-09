@@ -1,71 +1,64 @@
 import React, { Component } from "react";
-// import { Switch, Route } from "react-router-dom";
 import "./App.css";
-
-import PickPet from "./pages/PickPet/PickPet";
-import Care from "./pages/Care/Care";
+// Components
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Body from "./components/Body/Body";
+//Pages
+import FAQ from "./pages/FAQ/FAQ";
+import Creators from "./pages/Creators/Creators";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      petChosen: false,
-      name: "testName",
-      species: "Animal",
-      id: "",
-      happiness: 0,
-      weight: 0,
-      image:
-        "https://i.pinimg.com/originals/28/ac/5a/28ac5a9ebf96eb7606cc8b9ca2c3abef.jpg"
+      isBodyOpen: true,
+      faqChosen: false,
+      creatorsChosen: false
     };
   }
 
-  handleClick = () => {
-    this.setState({ petChosen: true });
-    console.log("Click");
+  onFAQClick = () => {
+    this.setState({
+      isBodyOpen: false,
+      faqChosen: true,
+      creatorsChosen: false
+    });
+  };
+
+  onCreatorsClick = () => {
+    this.setState({
+      isBodyOpen: false,
+      faqChosen: false,
+      creatorsChosen: true
+    });
+  };
+
+  onBackClick = () => {
+    this.setState({
+      isBodyOpen: true,
+      faqChosen: false,
+      creatorsChosen: false
+    });
   };
 
   render() {
-    const {
-      petChosen,
-      name,
-      species,
-      id,
-      happiness,
-      weight,
-      image
-    } = this.state;
+    const { isBodyOpen, faqChosen, creatorsChosen } = this.state;
 
     return (
       <div className="App">
-        PokeAPI
-        {/* <Switch>
-          <Route
-            path="/"
-            exact
-            component={PickPet}
-          />
-          <Route path="/care" exact component={Care} />
-        </Switch> */}
-        {!petChosen ? (
-          <PickPet
-            name={name}
-            species={species}
-            id={id}
-            happiness={happiness}
-            weight={weight}
-            image={image}
-            handleClick={this.handleClick}
-          />
+        <Navbar />
+        {isBodyOpen ? (
+          <Body />
+        ) : faqChosen && !creatorsChosen ? (
+          <FAQ onBackClick={this.onBackClick} />
         ) : (
-          <Care
-            name={name}
-            species={species}
-            happiness={happiness}
-            weight={weight}
-            image={image}
-          />
+          <Creators onBackClick={this.onBackClick} />
         )}
+        <Footer
+          onFAQClick={this.onFAQClick}
+          onCreatorsClick={this.onCreatorsClick}
+        />
       </div>
     );
   }

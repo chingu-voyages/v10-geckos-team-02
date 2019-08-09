@@ -1,19 +1,16 @@
 import React from "react";
 import "./PickPet.css";
-
+// Components
 import PetList from "../../components/PetList/PetList";
 
-const PickPet = ({ imageUrl, id, name, handleClick }) => {
+const PickPet = ({ handleClick }) => {
   return (
     <div className="pickpet-menu">
-      <h1>Pick A Pet</h1>
-      <h3>Click a pet below to start caring for it!</h3>
-      <PetList
-        imageUrl={imageUrl}
-        id={id}
-        name={name}
-        handleClick={handleClick}
-      />
+      <h1 className="pickpet-title">Pick A Pet</h1>
+      <h3 className="pickpet-description">
+        Click a kitty below to start caring for it!
+      </h3>
+      <PetList handleClick={handleClick} />
     </div>
   );
 };

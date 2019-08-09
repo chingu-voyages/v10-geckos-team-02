@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #d71e42;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+}
+
+.container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.image-container {
+  justify-self: start;
+}
+
+.logo {
+  width: 75px;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.no-burger a {
+  padding-right: 30px;
+}
+
+.route-container {
+  justify-self: end;
+}
+
+.burger-button > button,
+.cross-button > button {
+  outline: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .no-burger {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 551px) {
+  .burger {
+    display: none;
+  }
+}
