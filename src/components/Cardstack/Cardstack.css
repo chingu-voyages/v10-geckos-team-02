@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
   background-color: #fdc16a;
-  margin: 5% 27%;
+  margin: 5% 7%;
 }
 
 .game-card:before {
