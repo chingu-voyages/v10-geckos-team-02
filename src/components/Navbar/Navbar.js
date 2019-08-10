@@ -7,20 +7,23 @@ import Menu from "react-burger-menu/lib/menus/slide";
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <div className="image-container">
-        <a href="/">
-          <img className="logo" src={logo} alt="logo" />
+    <div className='container'>
+      <div className='image-container'>
+        <a href='https://chingu-voyages.github.io/v10-geckos-team-02/'>
+          <img className='logo' src={logo} alt='logo' />
         </a>
       </div>
-      <div className="title-container">
-        <a className="title" href="/">
+      <div className='title-container'>
+        <a
+          className='title'
+          href='https://chingu-voyages.github.io/v10-geckos-team-02/'
+        >
           NekoFudo
         </a>
       </div>
-      <div className="route-container">
-        <div className="routes">
-          <div className="burger">
+      <div className='route-container'>
+        <div className='routes'>
+          <div className='burger'>
             <Menu
               burgerButtonClassName={"burger-button"}
               crossButtonClassName={"cross-button"}
@@ -28,13 +31,21 @@ const Navbar = () => {
               styles={styles}
               right
             >
-              <a href="/">Login</a>
-              <a href="/">Signup</a>
+              <a href='https://chingu-voyages.github.io/v10-geckos-team-02/'>
+                Login
+              </a>
+              <a href='https://chingu-voyages.github.io/v10-geckos-team-02/'>
+                Signup
+              </a>
             </Menu>
           </div>
-          <div className="no-burger">
-            <a href="/">Login</a>
-            <a href="/">Signup</a>
+          <div className='no-burger'>
+            <a href='https://chingu-voyages.github.io/v10-geckos-team-02/'>
+              Login
+            </a>
+            <a href='https://chingu-voyages.github.io/v10-geckos-team-02/'>
+              Signup
+            </a>
           </div>
         </div>
       </div>
