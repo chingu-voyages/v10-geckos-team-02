@@ -50,10 +50,10 @@ class App extends Component {
         <Navbar />
         {isBodyOpen ? (
           <Body />
-        ) : faqChosen && !creatorsChosen ? (
-          <FAQ onBackClick={this.onBackClick} />
-        ) : (
+        ) : !faqChosen && creatorsChosen ? (
           <Creators onBackClick={this.onBackClick} />
+        ) : (
+          <FAQ onBackClick={this.onBackClick} />
         )}
         <Footer
           onFAQClick={this.onFAQClick}
